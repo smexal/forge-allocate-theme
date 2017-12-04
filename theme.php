@@ -6,6 +6,8 @@ use Forge\Core\Abstracts\Theme;
 use Forge\Core\App\App;
 use Forge\Loader;
 
+use Forge\Themes\Allocate\ThemeSettings;
+
 
 class AllocateTheme extends Theme {
     public $lessVariables = [
@@ -34,6 +36,8 @@ class AllocateTheme extends Theme {
     public function start() {
         $this->loadFiles();
         $this->registerNavigations();
+
+        new ThemeSettings();
     }
 
     private function registerNavigations() {
