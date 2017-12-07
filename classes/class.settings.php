@@ -33,6 +33,42 @@ class ThemeSettings {
         ], Settings::get('dark-or-light')), 'dark-or-light', 'left', 'allocate');
     }
 
+    /**
+     * Returns less variables for the theme according to "light" or "dark"
+     * setting which is set in the backend panel.
+     * @return array less variables
+     */
+    public function getLessVariables() {
+        $schema = $this->getSchema();
+        $variables = [
+        ];
+        if($schema == 'light') {
+            $variables = array_merge($variables, [
+                'color-bg' => '#FFFFFF',
+                'header-shadow' => '0 2px 4px 0 rgba(0,0,0,0.05)'
+            ]);
+        } else {
+            $variables = array_merge($variables, [
+                'color-bg' => '#1A1A1A',
+                'header-shadow' => '0 2px 4px 0 rgba(0,0,0,0.5)'
+            ]);
+        }
+        return $variables;
+    }
+
+    /**
+     * Checks the admin panel settings for the selected
+     * color theme, dark or light.
+     * @return string color scheme
+     */
+    private function getSchema() {
+        $schema = Settings::get('dark-or-light');
+        if($schema == 'dark') {
+            return $schema;
+        } 
+        return 'light';
+    }
+
 }
 
 ?>

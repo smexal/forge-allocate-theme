@@ -10,9 +10,8 @@ use Forge\Themes\Allocate\ThemeSettings;
 
 
 class AllocateTheme extends Theme {
-    public $lessVariables = [
-        'key' => 'var'
-    ];
+    public $lessVariables = [];
+    private $tSettings = null;
 
     public function tinyUrl() {
         return $this->url().'css/compiled/main.css';
@@ -34,10 +33,22 @@ class AllocateTheme extends Theme {
     }
 
     public function start() {
-        $this->loadFiles();
         $this->registerNavigations();
 
-        new ThemeSettings();
+        $this->loadFiles();
+        $this->tSettings = new ThemeSettings();
+        $this->lessVariables = $this->tSettings->getLessVariables();
+
+        /**
+         * remove existing css files for recompilation
+         */
+        App::instance()->eh->register('globalSettingsUpdated', function() {
+            $files = glob($this->directory().'css/compiled/*.css'); // get all file names
+            foreach($files as $file){ // iterate files
+                if(is_file($file))
+                    unlink($file); // delete file
+            }
+        });
     }
 
     private function registerNavigations() {
@@ -57,7 +68,8 @@ class AllocateTheme extends Theme {
         //$this->addStyle("//fonts.googleapis.com/css?family=Crimson+Text:600|Exo+2:300,400,500,700", true);
 
         // load custom css
-        //$this->addStyle($this->directory().'css/main.less');
+        $this->addStyle($this->directory().'css/main.less');
+        $this->addStyle($this->directory().'css/blocks/header.less');
     }
 
     public function scripts() {
