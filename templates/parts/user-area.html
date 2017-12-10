@@ -1,0 +1,10 @@
+<div class="user-info trigger-overlay-fitsize" data-trigger="#user-menu">
+    <div class="loggedin-as">
+        <span class="username">{$username}</span>
+        <div class="user-image" {if="$profile_image"}style="background-image:url({$profile_image})"{/if}></div>
+    </div>
+    <a class="menu-trigger{if="$warning"} warning{/if}"></a>
+</div>
+<div class="overlay-fitsize hidden" id="user-menu">
+    {$user_navigation}
+</div>

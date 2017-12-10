@@ -1,0 +1,18 @@
+<button 
+    type="button"
+    id="login-area"
+    data-trigger="#login-form"
+    class="btn btn-default login trigger-overlay-fitsize">{$login_label}</button>
+<div class="overlay-fitsize {if="!$error"}hidden{/if}" id="login-form">
+    <h3>{$login_label}</h3>
+    {if="$error"}
+        <div class="alert alert-warning">
+            {$error}
+        </div>
+    {/if}
+    <form method="post">
+        {$form}
+    </form>
+    <a class="block" href="{$reset.link}">{$reset.label}</a>
+    <a class="block" href="{$register.link}">{$register.label}</a>
+</div>

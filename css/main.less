@@ -1,7 +1,65 @@
 body {
     background-color: @color-bg;
+    font-family: @font-family;
+    color: @color-text-main;
+    font-size: 16px;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
 }
-.wrapper {
+.wrapper, .wrapped {
     max-width: 1150px;
     margin: 0 auto;
+}
+
+a {
+    color: @color-primary;
+    transition: 300ms;
+
+    &:hover {
+        color: @color-text-lighter;
+        text-decoration: none;
+    }
+
+    &.block {
+        display: block;
+    }
+}
+
+h1 {
+    font-size: 2.250em;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.lead {
+    font-size: 1.438em;
+}
+
+h2 {
+
+}
+
+h3 {
+    font-size: 1.313em;
+    color: @color-text-lighter;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.page-header {
+    border-bottom: none;
+    > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }

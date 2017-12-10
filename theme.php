@@ -4,13 +4,19 @@ namespace Forge\Themes\Allocate;
 
 use Forge\Core\Abstracts\Theme;
 use Forge\Core\App\App;
+use Forge\Core\Classes\ContentNavigation;
+use Forge\Core\Classes\Media;
+use Forge\Core\Classes\Settings;
+use Forge\Core\Classes\Utils;
 use Forge\Loader;
-
 use Forge\Themes\Allocate\ThemeSettings;
+use Forge\Themes\Allocate\UserArea;
 
 
 class AllocateTheme extends Theme {
     public $lessVariables = [];
+
+    private $userArea = null;
     private $tSettings = null;
 
     public function tinyUrl() {
@@ -27,6 +33,11 @@ class AllocateTheme extends Theme {
         ];
     }
 
+    private function registerEvents() {
+        $app = App::instance();
+        $app->eh->register('loginFailed', array($this->userArea, 'loginFailed'));
+    }
+
     private function loadFiles() {
         $l = Loader::instance();
         $l->loadDirectory($this->directory()."classes/");
@@ -34,6 +45,8 @@ class AllocateTheme extends Theme {
 
     public function start() {
         $this->registerNavigations();
+
+        $this->userArea = new UserArea();   
 
         $this->loadFiles();
         $this->tSettings = new ThemeSettings();
@@ -52,11 +65,22 @@ class AllocateTheme extends Theme {
     }
 
     private function registerNavigations() {
-        //ContentNavigation::registerPosition('footer-nav', i('Footer Navigation', 'butterlan'));/
+        ContentNavigation::registerPosition('main-navigation', i('Main Navigation', 'allocate'));
+        ContentNavigation::registerPosition('user-nav', i('User Navigation', 'allocate'));
     }
 
     public function globals() {
+        $logo = false;
+        if(is_numeric(Settings::get('site-logo'))) {
+            $logo = new Media(Settings::get('site-logo'));
+        }
+
         return [
+            'logo_url' => $logo ? $logo->getUrl() : false,
+            'home_url' => Utils::getHomeUrl(),
+            'bodyclass' => 'theme-'.$this->tSettings->getSchema(),
+            'main_navigation' => ContentNavigation::getNavigationList('main-navigation'),
+            'userarea' => $this->userArea->output()
         ];
     }
 
@@ -65,11 +89,21 @@ class AllocateTheme extends Theme {
         $this->addStyle(CORE_WWW_ROOT."ressources/css/externals/bootstrap.core.min.css", true);
         $this->addStyle(CORE_WWW_ROOT.'ressources/css/externals/material-icons.css', false, false);
 
-        //$this->addStyle("//fonts.googleapis.com/css?family=Crimson+Text:600|Exo+2:300,400,500,700", true);
+        $font = Settings::get('font');
+        if($font) {
+            $this->addStyle("//fonts.googleapis.com/css?family=".str_replace(" ", "+", $font).":400,500,700", true);
+        }
 
         // load custom css
         $this->addStyle($this->directory().'css/main.less');
+        $this->addStyle($this->directory().'css/forms.less');
+
+        $this->addStyle($this->directory().'css/animation-smack.less');
+
         $this->addStyle($this->directory().'css/blocks/header.less');
+        $this->addStyle($this->directory().'css/blocks/button.less');
+        $this->addStyle($this->directory().'css/blocks/userarea.less');
+        $this->addStyle($this->directory().'css/blocks/messages.less');
     }
 
     public function scripts() {
@@ -79,6 +113,8 @@ class AllocateTheme extends Theme {
         $this->addScript(CORE_WWW_ROOT."ressources/scripts/helpers.js", true, 2);
 
         $this->addScript("//www.google.com/recaptcha/api.js", true, false, true);
+
+        $this->addScript("assets/scripts/main.js");
     }
 
     public function customHeader() {

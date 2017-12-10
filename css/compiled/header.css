@@ -1,0 +1,58 @@
+body.theme-dark nav li a:hover {
+  color: #fcfcfc;
+}
+body.theme-light nav li a:hover {
+  color: #c9c9c9;
+}
+header {
+  height: 70px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  border-bottom: 1px solid #272727;
+}
+header .wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header .wrapper .left {
+  display: flex;
+}
+header .wrapper .right {
+  display: flex;
+  align-items: center;
+}
+header .wrapper .right > div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+header .logo {
+  display: flex;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: 50px;
+}
+header .logo img {
+  transition: 300ms;
+  transform-origin: left center;
+}
+header .logo:hover img {
+  transform: scale(1.05);
+}
+header nav ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+}
+header nav ul li {
+  line-height: 70px;
+  padding-right: 30px;
+}
+header nav ul li a {
+  color: #E2E2E2;
+  transition: 300ms;
+  font-size: 0.938em;
+}
+header nav ul li a:hover {
+  text-decoration: none;
+}

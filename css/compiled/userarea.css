@@ -1,0 +1,39 @@
+.userarea {
+  position: relative;
+}
+.userarea .overlay-fitsize {
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  top: 69px;
+  border: 1px solid #272727;
+  background-color: #1A1A1A;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 30px 40px;
+  width: 450px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+}
+.userarea .overlay-fitsize:not(.hidden) {
+  -webkit-animation: animate-smack 750ms linear both;
+  animation: animate-smack 750ms linear both;
+}
+.userarea .overlay-fitsize h3 {
+  margin-top: 0;
+}
+.userarea .loggedin-as {
+  display: flex;
+  align-items: center;
+}
+.userarea .loggedin-as .username {
+  font-size: 0.813em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.userarea .loggedin-as .user-image {
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #3B3B3B;
+}

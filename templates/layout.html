@@ -4,10 +4,27 @@
     <body class="{$bodyclass}">
         <header>
             <div class="wrapper">
-                asdf
+                <div class="left">
+                    <a class="logo" href="{$home_url}">
+                        {if="$logo_url"}<img src="{$logo_url}" /></a>{/if}
+                    </a>
+                    {$main_navigation}
+                </div>
+                <div class="right">
+                    <div class="userarea">
+                        {$userarea}
+                    </div>
+                </div>
             </div>
         </header>
         {$body}
+        {if="$messages"}
+            <div class="message-container">
+            {loop="$messages"}
+                <div class="alert alert-{$value.type}" role="alert">{$value.text}</div>
+            {/loop}
+            </div>
+        {/if}
     </body>
     <footer>
     </footer>

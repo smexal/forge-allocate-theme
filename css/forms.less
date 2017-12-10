@@ -1,0 +1,76 @@
+label {
+    font-weight: 400;
+}
+.form-control {
+    height: auto;
+}
+.form-group {
+    position: relative;
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+        padding-bottom: 20px;
+    }
+
+    &.focus > label {
+        top: 4px;
+        font-size: 10px;
+        opacity: .5;
+    }
+    > label {
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        transition: 300ms;
+
+        &+select.form-control {
+            top: 2.5em;
+            position: relative;
+            margin: 2em 0;
+        }
+    }
+
+    small {
+        font-size: 11px;
+        margin-top: 2px;
+        opacity: .6;
+        position: relative;
+        left: 20px;
+    }
+
+    .error-message {
+        margin: 4px 0;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    textarea,
+    .bootstrap-tagsinput {
+        padding: 14px 20px 6px 20px;
+        line-height: 24px;
+        background: transparent;
+        border: 1px solid @form-border-color;
+        box-shadow: none;
+        border-radius: 100px;
+        transition: 300ms;
+        color: @color-text-main;
+
+        &.error, &.has-error {
+        }
+
+        &:focus {
+            box-shadow: none;
+            outline: none;
+            border-color: @color-primary;
+        }
+    }
+}
+
+
+/* Some Hacky Hack For not getting the form yellow ugly stuffz.... well you get it, if you got time.... */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: 5000s ease-in-out 0s;
+}

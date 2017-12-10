@@ -1,0 +1,48 @@
+body {
+  background-color: #1A1A1A;
+  font-family: "Exo 2", Arial, "sans-serif";
+  color: #FFFFFF;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+.wrapper,
+.wrapped {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+a {
+  color: #FF1744;
+  transition: 300ms;
+}
+a:hover {
+  color: #F2F2F2;
+  text-decoration: none;
+}
+a.block {
+  display: block;
+}
+h1 {
+  font-size: 2.250em;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.lead {
+  font-size: 1.438em;
+}
+h3 {
+  font-size: 1.313em;
+  color: #F2F2F2;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.page-header {
+  border-bottom: none;
+}
+.page-header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

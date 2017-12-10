@@ -1,0 +1,66 @@
+label {
+  font-weight: 400;
+}
+.form-control {
+  height: auto;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 0;
+}
+.form-group:not(:last-child) {
+  padding-bottom: 20px;
+}
+.form-group.focus > label {
+  top: 4px;
+  font-size: 10px;
+  opacity: .5;
+}
+.form-group > label {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  transition: 300ms;
+}
+.form-group > label+select.form-control {
+  top: 2.5em;
+  position: relative;
+  margin: 2em 0;
+}
+.form-group small {
+  font-size: 11px;
+  margin-top: 2px;
+  opacity: .6;
+  position: relative;
+  left: 20px;
+}
+.form-group .error-message {
+  margin: 4px 0;
+}
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group textarea,
+.form-group .bootstrap-tagsinput {
+  padding: 14px 20px 6px 20px;
+  line-height: 24px;
+  background: transparent;
+  border: 1px solid #3B3B3B;
+  box-shadow: none;
+  border-radius: 100px;
+  transition: 300ms;
+  color: #FFFFFF;
+}
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus,
+.form-group textarea:focus,
+.form-group .bootstrap-tagsinput:focus {
+  box-shadow: none;
+  outline: none;
+  border-color: #FF1744;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: 5000s ease-in-out 0s;
+}
