@@ -30,6 +30,49 @@ header {
             display: flex;
             align-items: center;
 
+            i.icon {
+                color: @color-text-lighter;
+                font-size: 20px;
+                margin-right: 20px;
+                margin-left: 20px;
+                transition: 300ms;
+                position: relative;
+                top: 0;
+            }
+            .userarea {
+                .user-info {
+                    border-left: 1px solid @header-border-color;
+                    cursor: pointer;
+                    display: flex;
+                    height: 100%;
+                }
+
+                .user-nav {
+                    ul {
+                        display: flex;
+                        flex-flow: column;
+
+                        li {
+                            line-height: 60px;
+                            border-bottom: 1px solid @color-gray;
+                            font-size: 0.875em;
+
+                            &:last-child {
+                                border-bottom: none;
+                            } 
+                        }
+                    }
+                }
+
+                &:hover {
+                    i.icon {
+                        position: relative;
+                        top: 3px;
+                        color: @color-primary;
+                    }
+                }
+            }
+
             > div {
                 height: 100%;
                 display: flex;

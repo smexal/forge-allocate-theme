@@ -89,6 +89,8 @@ class AllocateTheme extends Theme {
         $this->addStyle(CORE_WWW_ROOT."ressources/css/externals/bootstrap.core.min.css", true);
         $this->addStyle(CORE_WWW_ROOT.'ressources/css/externals/material-icons.css', false, false);
 
+        $this->addStyle(WWW_ROOT.'themes/allocate/css/external/ionicon.css', false, false);
+
         $font = Settings::get('font');
         if($font) {
             $this->addStyle("//fonts.googleapis.com/css?family=".str_replace(" ", "+", $font).":400,500,700", true);

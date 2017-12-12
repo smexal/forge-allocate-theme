@@ -96,6 +96,7 @@ class ThemeSettings {
                 'cta-color' => '#626262',
                 'color-text-main' => '#333333',
                 'color-text-lighter' => '#666666',
+                'color-gray' => '#464646',
                 'form-border-color' => '#EAEAEA'
             ]);
 
@@ -109,6 +110,7 @@ class ThemeSettings {
                 'cta-color' => '#B3B3B3',
                 'color-text-main' => '#FFFFFF',
                 'color-text-lighter' => '#F2F2F2',
+                'color-gray' => '#464646',
                 'form-border-color' => '#3B3B3B'
             ]);
         }
