@@ -106,6 +106,8 @@ class AllocateTheme extends Theme {
         $this->addStyle($this->directory().'css/blocks/button.less');
         $this->addStyle($this->directory().'css/blocks/userarea.less');
         $this->addStyle($this->directory().'css/blocks/messages.less');
+
+        $this->addStyle($this->directory().'css/blocks/components.less');
     }
 
     public function scripts() {
@@ -117,6 +119,7 @@ class AllocateTheme extends Theme {
         $this->addScript("//www.google.com/recaptcha/api.js", true, false, true);
 
         $this->addScript("assets/scripts/main.js");
+        $this->addScript("assets/scripts/revealing.js");
     }
 
     public function customHeader() {

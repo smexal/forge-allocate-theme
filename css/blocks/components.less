@@ -1,0 +1,67 @@
+.forge-news-disturber {
+    > .row {
+        .image {
+            display: flex;
+            align-items: center;
+        }
+        img {
+            width: 32px;
+        }
+        &:hover {
+            box-shadow: @box-shadow;
+        }
+        background-color: @color-primary;
+        * {
+            color: @color-text-main;
+        }
+    }
+}
+
+.forge-news-teaser-big {
+
+    h1, .text, .actions {
+        padding: 0 30px 0 40px;
+    }
+
+    .text {
+        margin-bottom: 70px;
+    }
+
+    &.reveal.in .row:before {
+        height: 100%;
+    }
+
+    img {
+        box-shadow: @box-shadow;
+    }
+
+    .row {
+        position: relative;
+        display: flex;
+        align-items: stretch;
+
+        .actions {
+            position: absolute;
+            bottom: 0;
+
+            .btn {
+                margin-right: 10px;
+            }
+        }
+
+        &:before {
+            position: absolute;
+            left: 0;
+            height: 0%;
+            width: 2px;
+            -webkit-transition: all 8000ms cubic-bezier(0.23, 1, 0.32, 1);
+            transition:         all 8000ms cubic-bezier(0.23, 1, 0.32, 1);
+            content: '';
+            background-color: @color-primary;
+        }
+    }
+}
+
+.forge-events-block {
+    margin-top: 150px;
+}
