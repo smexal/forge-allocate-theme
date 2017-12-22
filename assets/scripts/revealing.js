@@ -1,4 +1,7 @@
 var revealing = {
+    timer : 250,
+    visibility : 30,
+
     init : function() {
         revealing.check();
         $(window).on('scroll', function() {
@@ -7,14 +10,14 @@ var revealing = {
     },
 
     check : function () {
-        timer = 250;
+        timer = revealing.timer;
         $("body.js-active").find(".reveal:not(.in)").each(function() {
-            if(calculateVisibilityForDiv($(this)) > 80) {
+            if(calculateVisibilityForDiv($(this)) > revealing.visibility) {
                 var el = $(this);
                 setTimeout(function() {
                     el.addClass('in');
                 }, timer);
-                timer+=timer;
+                timer+=revealing.timer;
             }
         });
     }

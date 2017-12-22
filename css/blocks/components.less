@@ -64,4 +64,73 @@
 
 .forge-events-block {
     margin-top: 150px;
+
+    &:not(.in) {
+        .bar {
+            width: 0% !important;
+        }
+    }
+
+    .forge-progress {
+        .bar-bg {
+            background-color: @color-grey-light;
+
+            .bar {
+                -webkit-transition: all 8000ms cubic-bezier(0.23, 1, 0.32, 1);
+                transition:         all 8000ms cubic-bezier(0.23, 1, 0.32, 1);
+                background-color: @color-primary;
+            }
+        }
+    }
+}
+
+.forge-sponsors {
+    margin-top: 120px;
+
+    &.reveal.in h2:after {
+        width: 220px;
+    }
+
+    h2 {
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+
+        &:after {
+            height: 2px;
+            width: 0px;
+            background-color: @color-primary;
+            content: '';
+            display: block;
+            margin-left: 20px;
+            margin-top: 10px;
+            -webkit-transition: all 8000ms cubic-bezier(0.23, 1, 0.32, 1);
+            transition:         all 8000ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+    }
+
+    .listing {
+        display: flex;
+        justify-content: space-between;
+
+        .listing-item {
+            width: 23%;
+
+            .image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 160px;
+                background-color: @color-grey-light;
+                img {
+                    width: 140px;
+                }
+            }
+
+            h3 {
+                margin-top: 10px;
+                margin-bottom: 0;
+            }
+        }
+    }
 }

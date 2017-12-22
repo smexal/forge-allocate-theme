@@ -57,6 +57,11 @@ h3 {
   justify-content: space-between;
   align-items: center;
 }
+.cta-light {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.813em;
+}
 p.discreet {
   opacity: 0.85;
   margin: 0;
