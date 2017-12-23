@@ -18,6 +18,7 @@ class AllocateTheme extends Theme {
 
     private $userArea = null;
     private $tSettings = null;
+    public $ajaxLayout = 'layout.ajax';
 
     public function tinyUrl() {
         return $this->url().'css/compiled/main.css';
@@ -106,8 +107,11 @@ class AllocateTheme extends Theme {
         $this->addStyle($this->directory().'css/blocks/button.less');
         $this->addStyle($this->directory().'css/blocks/userarea.less');
         $this->addStyle($this->directory().'css/blocks/messages.less');
+        $this->addStyle($this->directory().'css/blocks/slidein.less');
+        $this->addStyle($this->directory().'css/blocks/loader.less');
 
         $this->addStyle($this->directory().'css/blocks/components.less');
+
     }
 
     public function scripts() {
@@ -120,6 +124,7 @@ class AllocateTheme extends Theme {
 
         $this->addScript("assets/scripts/main.js");
         $this->addScript("assets/scripts/revealing.js");
+        $this->addScript("assets/scripts/slidein.js");
     }
 
     public function customHeader() {

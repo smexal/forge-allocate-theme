@@ -1,6 +1,7 @@
 <?php
 namespace Forge\Themes\Allocate\Collections;
 
+use Forge\Core\App\App;
 use \Forge\Core\Abstracts\DataCollection;
 
 class SponsorsCollection extends DataCollection {
@@ -24,7 +25,31 @@ class SponsorsCollection extends DataCollection {
                 'order' => 30,
                 'position' => 'left',
                 'hint' => ''
+            ],
+            [
+                'key' => 'text',
+                'label' => i('Text', 'allocate'),
+                'multilang' => true,
+                'type' => 'wysiwyg',
+                'order' => 20
+            ],
+            [
+                'key' => 'website',
+                'label' => i('Website', 'allocate'),
+                'multilang' => true,
+                'type' => 'url'
             ]
+        ]);
+    }
+
+    public function render($item) {
+        $dir = App::instance()->getThemeDirectory()."templates/collections/";
+        return App::instance()->render($dir, 'sponsor', [
+            'title' => $item->getMeta('title'),
+            'lead' => $item->getMeta('description'),
+            'text' => $item->getMeta('text'),
+            'website' => $item->getMeta('website'),
+            'visit_website' => i('Visit sponsor website', 'allocate')
         ]);
     }
 }

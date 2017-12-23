@@ -27,15 +27,15 @@ class SponsorlistingComponent extends ListingComponent {
         $image = $item->getMeta('image');
         $image = new Media($image);
 
-        return App::instance()->render(App::instance()->getThemeDirectory()."templates/parts/", 'sponsor-listing-item', 
-            [
-                'title' => $item->getMeta('title'),
-                'description' => $item->getMeta('description'),
-                'image' => [
-                    'src' => $image->url.$image->name,
-                    'alt' => $item->getMeta('title')
-                ]
-            ]);
+        return App::instance()->render(App::instance()->getThemeDirectory()."templates/parts/", 'sponsor-listing-item', [
+            'title' => $item->getMeta('title'),
+            'description' => $item->getMeta('description'),
+            'image' => [
+                'src' => $image->url.$image->name,
+                'alt' => $item->getMeta('title')
+            ],
+            'detail_url' => $item->url()
+        ]);
     }
 }
 ?>

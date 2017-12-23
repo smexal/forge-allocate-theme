@@ -8,6 +8,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
 }
+body .content,
+body header {
+  transition: 300ms;
+}
+body.overlay-open > .content,
+body.overlay-open > header {
+  opacity: 0.3;
+}
 .wrapper,
 .wrapped {
   max-width: 1150px;
@@ -35,6 +43,9 @@ h1 {
   font-weight: 700;
   margin-bottom: 30px;
   margin-top: 0;
+}
+.actions {
+  margin-top: 20px;
 }
 .lead {
   font-size: 1.438em;

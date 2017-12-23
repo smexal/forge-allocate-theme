@@ -113,8 +113,18 @@
         display: flex;
         justify-content: space-between;
 
+        .discreet {
+            color: @color-text-main;
+        }
+
         .listing-item {
             width: 23%;
+
+            &:hover {
+                .image img {
+                    width: 140px;
+                }
+            }
 
             .image {
                 display: flex;
@@ -123,7 +133,8 @@
                 height: 160px;
                 background-color: @color-grey-light;
                 img {
-                    width: 140px;
+                    transition: 300ms;
+                    width: 120px;
                 }
             }
 

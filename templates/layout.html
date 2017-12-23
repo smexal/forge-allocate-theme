@@ -17,7 +17,9 @@
                 </div>
             </div>
         </header>
-        {$body}
+        <div class="content">
+            {$body}
+        </div>
         {if="$messages"}
             <div class="message-container">
             {loop="$messages"}
@@ -25,6 +27,12 @@
             {/loop}
             </div>
         {/if}
+        <div id="slidein-overlay">
+            <a href="javascript://" class="close"></a>
+            <div class="loader"></div>
+            <div class="content">
+            </div>
+        </div>
     </body>
     <footer>
     </footer>

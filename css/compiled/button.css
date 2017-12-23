@@ -9,6 +9,8 @@
   font-size: 0.813em;
   text-transform: uppercase;
   min-width: 130px;
+  line-height: 20px;
+  padding: 6px 30px;
   transition: 300ms;
 }
 .btn:hover {

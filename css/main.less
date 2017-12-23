@@ -14,6 +14,17 @@ body {
 
     /* Support for IE. */
     font-feature-settings: 'liga';
+
+    .content, header {
+        transition: 300ms;
+    }
+
+    &.overlay-open {
+        > .content, > header {
+            //filter: blur(3px);
+            opacity: 0.3;
+        }
+    }
 }
 .wrapper, .wrapped {
     max-width: 1150px;
@@ -46,6 +57,10 @@ h1 {
     font-weight: 700;
     margin-bottom: 30px;
     margin-top: 0;
+}
+
+.actions {
+    margin-top: 20px;
 }
 
 .lead {

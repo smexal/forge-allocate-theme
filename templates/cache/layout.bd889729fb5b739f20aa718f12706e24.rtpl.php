@@ -17,7 +17,9 @@
                 </div>
             </div>
         </header>
-        <?php echo $body;?>
+        <div class="content">
+            <?php echo $body;?>
+        </div>
         <?php if( $messages ){ ?>
             <div class="message-container">
             <?php $counter1=-1; if( isset($messages) && is_array($messages) && sizeof($messages) ) foreach( $messages as $key1 => $value1 ){ $counter1++; ?>
@@ -25,6 +27,12 @@
             <?php } ?>
             </div>
         <?php } ?>
+        <div id="slidein-overlay">
+            <a href="javascript://" class="close"></a>
+            <div class="loader"></div>
+            <div class="content">
+            </div>
+        </div>
     </body>
     <footer>
     </footer>
