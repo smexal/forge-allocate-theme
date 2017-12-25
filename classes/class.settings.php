@@ -15,12 +15,34 @@ class ThemeSettings {
         }
 
         Settings::addTab('allocate', i('Allocate Theme', 'allocate'));
+        Settings::addTab('social-media', i('Social Media', 'allocate'));
 
         $this->cs = Settings::instance();
-        $this->fields();
+        $this->themeFields();
+        $this->socialFields();
     }
 
-    private function fields() {
+    private function socialFields() {
+        // profiles
+        $profiles = ['facebook', 'instagram', 'twitch', 'youtube', 'twitter', 'discord', 'pinterest'];
+        // register fields
+        $position = 'right';
+        foreach($profiles as $profile) {
+            if($position == 'right') {
+                $position = 'left';
+            } else {
+                $position = 'right';
+            }
+            $this->cs->registerField(
+                Fields::text([
+                    'key' => 'social-'.$profile,
+                    'label' => ucfirst($profile),
+                ], Settings::get('social-'.$profile)
+            ), 'social-'.$profile, $position, 'social-media');
+        }
+    }
+
+    private function themeFields() {
 
         // Dark or Light Theme Selection
         $this->cs->registerField(
@@ -80,9 +102,11 @@ class ThemeSettings {
     public function getLessVariables() {
         $schema = $this->getSchema();
         $primColor = Settings::get('color-brand-primary');
+        $secColor = Settings::get('color-brand-secondary');
         $font = Settings::get('font');
         $variables = [
             'color-primary' =>  $primColor ? $primColor : '#F5A623',
+            'color-secondary' => $secColor ? $secColor : '#F5A623',
             'font-family' => '"'.$font.'", Arial, "sans-serif"'
         ];
 
@@ -90,6 +114,7 @@ class ThemeSettings {
         if($schema == 'light') {
             $variables = array_merge($variables, [
                 'color-bg' => '#FFFFFF',
+                'color-bg-ligher' => '#FAFAFA',
                 'color-grey-light' => '#F2F2F2',
                 'box-shadow' => '0 2px 4px 0 rgba(0,0,0,0.05)',
                 'header-border-color' => '#EAEAEA',
@@ -105,6 +130,7 @@ class ThemeSettings {
         } else {
             $variables = array_merge($variables, [
                 'color-bg' => '#1A1A1A',
+                'color-bg-ligher' => '#212121',
                 'color-grey-light' => '#333333',
                 'box-shadow' => '0 2px 4px 0 rgba(0,0,0,0.5)',
                 'header-border-color' => '#272727',

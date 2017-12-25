@@ -4,9 +4,22 @@ label {
 .form-control {
     height: auto;
 }
+form + p.message {
+    font-size: 0.8em;
+    padding-left: 20px;
+    margin-top: -10px;
+
+    &.success {
+        color: @color-secondary;
+    }
+    &.error {
+        color: @color-primary;
+    }
+}
 .form-group {
     position: relative;
     margin-bottom: 0;
+    padding-bottom: 10px;
 
     &:not(:last-child) {
         padding-bottom: 20px;

@@ -21,6 +21,9 @@ body.overlay-open > header {
   max-width: 1150px;
   margin: 0 auto;
 }
+.boxed {
+  margin-top: 100px;
+}
 *::-moz-focus-inner {
   border: 0 !important;
 }
@@ -54,7 +57,8 @@ h2 {
   font-size: 1.813em;
   font-weight: bold;
 }
-h3 {
+h3,
+p.feddow {
   font-size: 1.313em;
   color: #F2F2F2;
   font-weight: 700;

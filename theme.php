@@ -91,6 +91,7 @@ class AllocateTheme extends Theme {
         $this->addStyle(CORE_WWW_ROOT.'ressources/css/externals/material-icons.css', false, false);
 
         $this->addStyle(WWW_ROOT.'themes/allocate/css/external/ionicon.css', false, false);
+        $this->addStyle(WWW_ROOT.'themes/allocate/css/external/socicon.css', false, false);
 
         $font = Settings::get('font');
         if($font) {
