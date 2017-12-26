@@ -4,6 +4,8 @@ namespace Forge\Themes\Allocate\Components;
 
 use Forge\Core\Abstracts\Component;
 use Forge\Core\App\App;
+use Forge\Core\Classes\Settings;
+use Forge\Themes\Allocate\ThemeSettings;
 
 class AboutComponent extends Component {
     public $settings = [];
@@ -86,8 +88,24 @@ class AboutComponent extends Component {
             'f2_text' => $this->getField('f2_text'),
             'cta_label' => $this->getField('cta_label'),
             'cta_link' => $this->getField('cta_link'),
-            'mc_form' => $mcForm
+            'mc_form' => $mcForm,
+            'social_title' => i('Social Media', 'allocate'),
+            'social_medias' => $this->getSocialMedia()
         ]);
+    }
+
+    public function getSocialMedia() {
+        $socials = [];
+        foreach(ThemeSettings::$socPlattforms as $soc) {
+            $plat = Settings::get('social-'.$soc);
+            if($plat) {
+                $socials[] = [
+                    'link' => $plat,
+                    'type' => $soc
+                ];
+            }
+        }
+        return $socials;
     }
 
 }

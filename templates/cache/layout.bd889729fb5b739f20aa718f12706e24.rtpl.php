@@ -35,6 +35,16 @@
         </div>
     </body>
     <footer>
+        <div class="wrapper">
+            <div class="row">
+                <a class="logo" href="<?php echo $home_url;?>">
+                    <?php if( $logo_url ){ ?><img src="<?php echo $logo_url;?>" /></a><?php } ?>
+                </a>
+                <div class="right">
+                    <?php echo $main_navigation;?>
+                </div>
+            </div>
+        </div>
     </footer>
 
 </html>

@@ -1,4 +1,4 @@
-<div class="component about-block">
+<div class="component about-block reveal">
     <div class="wrapper">
         <div class="row">
             <div class="col-lg-6">
@@ -20,6 +20,14 @@
             </div>
             <div class="col-lg-5">
                 {$mc_form}
+                <div class="social">
+                    <h3>{$social_title}</h3>
+                    <ul class="medias">
+                        {loop="$social_medias"}
+                            <li><a href="{$value.link}" target="_blank" class="icon-circle socicon-{$value.type}"></a></li>
+                        {/loop}
+                    </li>
+                </div>
             </div>
         </div>
     </div>

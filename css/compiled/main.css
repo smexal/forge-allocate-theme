@@ -97,3 +97,29 @@ p.discreet + h3 {
   opacity: 1;
   transform: translateY(0px);
 }
+.icon-circle {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  border: 1px solid #333333;
+  border-radius: 28px;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms;
+}
+.icon-circle:focus {
+  outline: none;
+  text-decoration: none;
+  border-color: #767676;
+}
+.icon-circle:hover {
+  border-color: #767676;
+}
+.icon-circle:hover:before {
+  color: #FF1744;
+}
+.icon-circle:before {
+  transition: 300ms;
+  font-size: 24px;
+  color: #767676;
+}

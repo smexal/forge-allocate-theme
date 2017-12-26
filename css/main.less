@@ -117,3 +117,34 @@ p.discreet {
     opacity: 1;
     transform:translateY(0px);
 }
+
+.icon-circle {
+    display: flex;
+    width: 56px;
+    height: 56px;
+    border: 1px solid @color-grey-light;
+    border-radius: 28px;
+    justify-content: center;
+    align-items: center;
+    transition: 300ms;
+
+    &:focus {
+        outline: none;
+        text-decoration: none;
+        border-color: @color-grey;
+    }
+
+    &:hover {
+        border-color: @color-grey;
+    }
+
+    &:hover:before {
+        color: @color-primary;
+    }
+
+    &:before {
+        transition: 300ms;
+        font-size: 24px;
+        color: @color-grey;
+    }
+}

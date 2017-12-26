@@ -9,6 +9,8 @@ use Forge\Core\Classes\Settings;
 class ThemeSettings {
     private $cs = null;
 
+    public static $socPlattforms = ['facebook', 'instagram', 'twitch', 'youtube', 'twitter', 'discord', 'pinterest'];
+
     public function __construct() {
         if(! Auth::allowed("manage.settings", true)) {
             return;
@@ -23,11 +25,9 @@ class ThemeSettings {
     }
 
     private function socialFields() {
-        // profiles
-        $profiles = ['facebook', 'instagram', 'twitch', 'youtube', 'twitter', 'discord', 'pinterest'];
         // register fields
         $position = 'right';
-        foreach($profiles as $profile) {
+        foreach(self::$socPlattforms as $profile) {
             if($position == 'right') {
                 $position = 'left';
             } else {
@@ -116,6 +116,7 @@ class ThemeSettings {
                 'color-bg' => '#FFFFFF',
                 'color-bg-ligher' => '#FAFAFA',
                 'color-grey-light' => '#F2F2F2',
+                'color-grey' => '#EAEAEA',
                 'box-shadow' => '0 2px 4px 0 rgba(0,0,0,0.05)',
                 'header-border-color' => '#EAEAEA',
                 'nav-color' => '#333333',
@@ -132,6 +133,7 @@ class ThemeSettings {
                 'color-bg' => '#1A1A1A',
                 'color-bg-ligher' => '#212121',
                 'color-grey-light' => '#333333',
+                'color-grey' => '#767676',
                 'box-shadow' => '0 2px 4px 0 rgba(0,0,0,0.5)',
                 'header-border-color' => '#272727',
                 'nav-color' => '#E2E2E2',

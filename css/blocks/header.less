@@ -12,7 +12,7 @@ body.theme-light {
     }
 }
 
-header {
+header, footer {
     height: @header-height;
     box-shadow: @box-shadow;
     border-bottom: 1px solid @header-border-color;
@@ -122,4 +122,15 @@ header {
             }
         }
     }
+}
+
+footer {
+    border-bottom: none;
+    box-shadow: none;
+    .wrapper .row {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    } 
 }
