@@ -12,7 +12,7 @@ body.theme-light {
     }
 }
 
-header, footer {
+header, footer, .subnavigation {
     height: @header-height;
     box-shadow: @box-shadow;
     border-bottom: 1px solid @header-border-color;
@@ -108,12 +108,36 @@ header, footer {
 
             li {
                 line-height: @header-height;
-                padding-right: 30px;
+                margin-right: 30px;
+                position: relative;
+
+                &.active {
+                    &:after {
+                        animation: widthIn;
+                        animation-delay: 500ms;
+                        animation-duration: 500ms;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: both;
+                        animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+                        height: 2px;
+                        width: 0%;
+                        background-color: @color-primary;
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        bottom: 15px;
+                    }
+                }
 
                 a {
                     color: @nav-color;
                     transition: 300ms;
                     font-size: 0.938em;
+
+                    &:focus {
+                        color: @color-secondary;
+                        text-decoration: none;
+                    }
 
                     &:hover {
                         text-decoration: none;
@@ -123,14 +147,19 @@ header, footer {
         }
     }
 }
-
 footer {
     border-bottom: none;
     box-shadow: none;
+
     .wrapper .row {
         height: 80px;
         display: flex;
         justify-content: space-between;
         align-items: center;
     } 
+}
+
+.subnavigation {
+    position: relative;
+    z-index: 5;
 }

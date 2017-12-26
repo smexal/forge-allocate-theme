@@ -5,29 +5,34 @@ body.theme-light nav li a:hover {
   color: #c9c9c9;
 }
 header,
-footer {
+footer,
+.subnavigation {
   height: 70px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
   border-bottom: 1px solid #272727;
 }
 header .wrapper,
-footer .wrapper {
+footer .wrapper,
+.subnavigation .wrapper {
   height: 100%;
   padding: 0 15px;
   display: flex;
   justify-content: space-between;
 }
 header .wrapper .left,
-footer .wrapper .left {
+footer .wrapper .left,
+.subnavigation .wrapper .left {
   display: flex;
 }
 header .wrapper .right,
-footer .wrapper .right {
+footer .wrapper .right,
+.subnavigation .wrapper .right {
   display: flex;
   align-items: center;
 }
 header .wrapper .right i.icon,
-footer .wrapper .right i.icon {
+footer .wrapper .right i.icon,
+.subnavigation .wrapper .right i.icon {
   color: #F2F2F2;
   font-size: 20px;
   margin-right: 20px;
@@ -37,74 +42,111 @@ footer .wrapper .right i.icon {
   top: 0;
 }
 header .wrapper .right .userarea .user-info,
-footer .wrapper .right .userarea .user-info {
+footer .wrapper .right .userarea .user-info,
+.subnavigation .wrapper .right .userarea .user-info {
   border-left: 1px solid #272727;
   cursor: pointer;
   display: flex;
   height: 100%;
 }
 header .wrapper .right .userarea .user-nav ul,
-footer .wrapper .right .userarea .user-nav ul {
+footer .wrapper .right .userarea .user-nav ul,
+.subnavigation .wrapper .right .userarea .user-nav ul {
   display: flex;
   flex-flow: column;
 }
 header .wrapper .right .userarea .user-nav ul li,
-footer .wrapper .right .userarea .user-nav ul li {
+footer .wrapper .right .userarea .user-nav ul li,
+.subnavigation .wrapper .right .userarea .user-nav ul li {
   line-height: 60px;
   border-bottom: 1px solid #464646;
   font-size: 0.875em;
 }
 header .wrapper .right .userarea .user-nav ul li:last-child,
-footer .wrapper .right .userarea .user-nav ul li:last-child {
+footer .wrapper .right .userarea .user-nav ul li:last-child,
+.subnavigation .wrapper .right .userarea .user-nav ul li:last-child {
   border-bottom: none;
 }
 header .wrapper .right .userarea:hover i.icon,
-footer .wrapper .right .userarea:hover i.icon {
+footer .wrapper .right .userarea:hover i.icon,
+.subnavigation .wrapper .right .userarea:hover i.icon {
   position: relative;
   top: 3px;
   color: #FF1744;
 }
 header .wrapper .right > div,
-footer .wrapper .right > div {
+footer .wrapper .right > div,
+.subnavigation .wrapper .right > div {
   height: 100%;
   display: flex;
   align-items: center;
 }
 header .logo,
-footer .logo {
+footer .logo,
+.subnavigation .logo {
   display: flex;
   height: 100%;
   vertical-align: middle;
   margin-right: 50px;
 }
 header .logo img,
-footer .logo img {
+footer .logo img,
+.subnavigation .logo img {
   transition: 300ms;
   transform-origin: left center;
 }
 header .logo:hover img,
-footer .logo:hover img {
+footer .logo:hover img,
+.subnavigation .logo:hover img {
   transform: scale(1.05);
 }
 header nav ul,
-footer nav ul {
+footer nav ul,
+.subnavigation nav ul {
   list-style-type: none;
   padding-left: 0;
   display: flex;
 }
 header nav ul li,
-footer nav ul li {
+footer nav ul li,
+.subnavigation nav ul li {
   line-height: 70px;
-  padding-right: 30px;
+  margin-right: 30px;
+  position: relative;
+}
+header nav ul li.active:after,
+footer nav ul li.active:after,
+.subnavigation nav ul li.active:after {
+  animation: widthIn;
+  animation-delay: 500ms;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.0,0.0,0.2,1);
+  height: 2px;
+  width: 0%;
+  background-color: #FF1744;
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 15px;
 }
 header nav ul li a,
-footer nav ul li a {
+footer nav ul li a,
+.subnavigation nav ul li a {
   color: #E2E2E2;
   transition: 300ms;
   font-size: 0.938em;
 }
+header nav ul li a:focus,
+footer nav ul li a:focus,
+.subnavigation nav ul li a:focus {
+  color: #00E676;
+  text-decoration: none;
+}
 header nav ul li a:hover,
-footer nav ul li a:hover {
+footer nav ul li a:hover,
+.subnavigation nav ul li a:hover {
   text-decoration: none;
 }
 footer {
@@ -116,4 +158,8 @@ footer .wrapper .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.subnavigation {
+  position: relative;
+  z-index: 5;
 }

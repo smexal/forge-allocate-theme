@@ -16,6 +16,15 @@ body.overlay-open > .content,
 body.overlay-open > header {
   opacity: 0.3;
 }
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+body > .content {
+  min-height: 800px;
+}
 .wrapper,
 .wrapped {
   max-width: 1150px;
@@ -122,4 +131,28 @@ p.discreet + h3 {
   transition: 300ms;
   font-size: 24px;
   color: #767676;
+}
+@keyframes heightIn {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+@keyframes widthIn {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

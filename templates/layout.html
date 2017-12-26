@@ -21,30 +21,28 @@
             {$body}
         </div>
         {if="$messages"}
-            <div class="message-container">
-            {loop="$messages"}
-                <div class="alert alert-{$value.type}" role="alert">{$value.text}</div>
-            {/loop}
-            </div>
+        <div class="message-container">
+        {loop="$messages"}
+            <div class="alert alert-{$value.type}" role="alert">{$value.text}</div>
+        {/loop}
+        </div>
         {/if}
         <div id="slidein-overlay">
             <a href="javascript://" class="close"></a>
             <div class="loader"></div>
-            <div class="content">
-            </div>
+            <div class="content"></div>
         </div>
-    </body>
-    <footer>
-        <div class="wrapper">
-            <div class="row">
-                <a class="logo" href="{$home_url}">
-                    {if="$logo_url"}<img src="{$logo_url}" /></a>{/if}
-                </a>
-                <div class="right">
-                    {$main_navigation}
+        <footer>
+            <div class="wrapper">
+                <div class="row">
+                    <a class="logo" href="{$home_url}">
+                        {if="$logo_url"}<img src="{$logo_url}" /></a>{/if}
+                    </a>
+                    <div class="right">
+                        {$main_navigation}
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-
+        </footer>
+    </body>
 </html>

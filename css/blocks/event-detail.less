@@ -1,0 +1,54 @@
+.hero {
+    height: 440px;
+    position: relative;
+    background-size: 100%;
+
+    opacity: 0;
+    animation: fadeIn;
+    animation-delay: 200ms;
+    animation-duration: 800ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+
+    h1 {
+        z-index: 3;
+        position: relative;
+        max-width: 360px;
+
+        padding-left: 30px;
+
+        &:before {
+            position: absolute;
+            left: 0;
+            height: 0%;
+            width: 2px;
+            animation: heightIn;
+            animation-delay: 1000ms;
+            animation-duration: 700ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+            content: '';
+            background-color: @color-primary;
+        }
+    }
+
+    .wrapped {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        height: 100%;
+    }
+
+    &:before {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 2;
+        opacity: .5;
+        background-color: @color-bg;
+        content: '';
+    }
+}
