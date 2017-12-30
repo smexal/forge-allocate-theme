@@ -54,7 +54,7 @@ h1 {
   font-size: 2.250em;
   font-weight: 700;
   margin-bottom: 30px;
-  margin-top: 0;
+  margin-top: 70px;
 }
 .actions {
   margin-top: 20px;
@@ -67,7 +67,8 @@ h2 {
   font-weight: bold;
 }
 h3,
-p.feddow {
+p.feddow,
+.facts-block .main {
   font-size: 1.313em;
   color: #F2F2F2;
   font-weight: 700;
@@ -86,7 +87,13 @@ p.feddow {
   font-weight: bold;
   font-size: 0.813em;
 }
-p.discreet {
+p.discreet,
+.facts-block .before,
+.seatplan .legend .amount,
+.seatplan .legend .legend-entry .label,
+small {
+  color: #FFFFFF;
+  font-weight: normal;
   opacity: 0.85;
   margin: 0;
   padding: 0;
@@ -94,7 +101,19 @@ p.discreet {
 }
 p.discreet + h1,
 p.discreet + h2,
-p.discreet + h3 {
+p.discreet + h3,
+.facts-block .before + h1,
+.facts-block .before + h2,
+.facts-block .before + h3,
+.seatplan .legend .amount + h1,
+.seatplan .legend .amount + h2,
+.seatplan .legend .amount + h3,
+.seatplan .legend .legend-entry .label + h1,
+.seatplan .legend .legend-entry .label + h2,
+.seatplan .legend .legend-entry .label + h3,
+small + h1,
+small + h2,
+small + h3 {
   margin-top: 0;
 }
 .reveal {
@@ -155,4 +174,10 @@ p.discreet + h3 {
   100% {
     opacity: 1;
   }
+}
+.compact-infobox {
+  background-color: #212121;
+}
+.compact-infobox .avatar {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
 }

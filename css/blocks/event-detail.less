@@ -33,6 +33,18 @@
         }
     }
 
+    .signup {
+        position: relative;
+        z-index: 3;
+        padding-left: 30px;
+        animation: fadeIn;
+        animation-delay: 500ms;
+        animation-duration: 400ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+    }
+
     .wrapped {
         display: flex;
         justify-content: left;
@@ -52,3 +64,100 @@
         content: '';
     }
 }
+
+.facts-block {
+    span {
+        display: block;
+    }
+}
+
+.seatplan {
+    border: none;
+
+    .legend {
+        .legend-entry {
+            margin-right: 10px;
+            margin-left: 10px;
+
+            .label {
+                margin-left: 4px;
+                line-height: 26px;
+            }
+        }
+    }
+
+    .s-row {
+        margin-bottom: 4px;
+    }
+
+    .cell {
+        border: none;
+        width: 21px;
+        height: 21px;
+        border-radius: 4px;
+
+        &.available {
+            background-color: @color-secondary;
+        }
+
+        &.sold {
+            background-color: @color-primary;
+        }
+
+        &.spacer {
+            background-color: @color-bg;
+        }
+    }
+}
+
+#participants {
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.compact-infobox {
+    margin-right: 15px;
+    margin-bottom: 15px;
+
+    min-width: 320px;
+}
+
+.search-field.form-group {
+    position: absolute;
+    z-index: 4;
+}
+.search-field + .row > .col-lg-12 > #seatplan {
+    margin-top: 60px;
+}
+
+#seatplan .legend {
+    position: absolute;
+    top: -30px;
+    right: 0;
+}
+#seatplan {
+    .cell.highlight {
+        animation: pulse 2s infinite;
+    }
+}
+#participants .compact-infobox {
+    &.highlight {
+        animation: pulse 2s infinite;   
+    }
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+

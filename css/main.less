@@ -73,7 +73,7 @@ h1 {
     font-size: 2.250em;
     font-weight: 700;
     margin-bottom: 30px;
-    margin-top: 0;
+    margin-top: 70px;
 }
 
 .actions {
@@ -89,7 +89,7 @@ h2 {
     font-weight: bold;
 }
 
-h3, p.feddow {
+h3, p.feddow, .facts-block .main {
     font-size: 1.313em;
     color: @color-text-lighter;
     font-weight: 700;
@@ -111,7 +111,13 @@ h3, p.feddow {
     font-size: 0.813em;
 }
 
-p.discreet {
+p.discreet,
+.facts-block .before,
+.seatplan .legend .amount,
+.seatplan .legend .legend-entry .label,
+small {
+    color: @color-text-main;
+    font-weight: normal;
     opacity: 0.85;
     margin: 0;
     padding: 0;
@@ -175,4 +181,12 @@ p.discreet {
 @keyframes fadeIn {
     0%      { opacity: 0; }
     100%    { opacity: 1; }
+}
+
+.compact-infobox {
+    background-color: @color-bg-lighter;
+
+    .avatar {
+        box-shadow: @box-shadow;
+    }
 }

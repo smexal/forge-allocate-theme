@@ -114,7 +114,7 @@ class ThemeSettings {
         if($schema == 'light') {
             $variables = array_merge($variables, [
                 'color-bg' => '#FFFFFF',
-                'color-bg-ligher' => '#FAFAFA',
+                'color-bg-lighter' => '#FAFAFA',
                 'color-grey-light' => '#F2F2F2',
                 'color-grey' => '#EAEAEA',
                 'box-shadow' => '0 2px 4px 0 rgba(0,0,0,0.05)',
@@ -131,7 +131,7 @@ class ThemeSettings {
         } else {
             $variables = array_merge($variables, [
                 'color-bg' => '#1A1A1A',
-                'color-bg-ligher' => '#212121',
+                'color-bg-lighter' => '#212121',
                 'color-grey-light' => '#333333',
                 'color-grey' => '#767676',
                 'box-shadow' => '0 2px 4px 0 rgba(0,0,0,0.5)',
