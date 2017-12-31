@@ -14,6 +14,18 @@ class SponsorlistingComponent extends ListingComponent {
     protected $cssClasses = ['wrapper', 'reveal'];
 
     public function prefs() {
+        $this->settings = array_merge([
+            [
+                'label' => i('Display type', 'forge-tournaments'),
+                'hint' => i('Small or big display type', 'forge-tournaments'),
+                'key' => 'display_type',
+                'type' => 'select',
+                'values' => [
+                    'big' => i('Big Teaser Elements', 'forge-tournaments'),
+                    'small' => i('Small Teasr Elements', 'forge-tournaments')
+                ]
+            ]
+        ], $this->settings);
         return [
             'name' => i('Sponsor Listing', 'allocate'),
             'description' => i('Select and list sponsors.', 'allocate'),
@@ -23,6 +35,13 @@ class SponsorlistingComponent extends ListingComponent {
             'container' => false
         ];
     }
+
+    public function beforeContent() {
+        if($this->getField('display_type') == 'small') {
+            $this->cssClasses[] = 'small';
+        };
+    }
+    
     public function renderItem($item) {
         $image = $item->getMeta('image');
         $image = new Media($image);

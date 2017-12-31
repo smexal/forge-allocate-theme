@@ -152,6 +152,7 @@ footer nav ul li a:hover,
 footer {
   border-bottom: none;
   box-shadow: none;
+  background-color: #131313;
 }
 footer .wrapper .row {
   height: 80px;

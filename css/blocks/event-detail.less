@@ -113,6 +113,13 @@
 #participants {
     flex-wrap: wrap;
     margin-top: 40px;
+
+    .avatar-placeholder {
+        text-align: center;
+        font-size: 32px;
+        padding-top: 7px;
+        color: @color-gray;
+    }
 }
 .compact-infobox {
     margin-right: 15px;
@@ -135,8 +142,13 @@
     right: 0;
 }
 #seatplan {
-    .cell.highlight {
+    .cell.§ight {
         animation: pulse 2s infinite;
+    }
+}
+.seatplan.searchActive {
+    .cell:not(.highlight) {
+        opacity: .2;
     }
 }
 #participants .compact-infobox {

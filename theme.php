@@ -31,6 +31,27 @@ class AllocateTheme extends Theme {
                 'selector' => 'p',
                 'classes' => 'lead'
             ],
+            [
+                'title' => i('Small text', 'allocate'),
+                'selector' => 'p',
+                'classes' => 'discreet'
+            ],
+            [
+                'title' => i('Heading 1', 'allocate'),
+                'block' => 'h1'
+            ],
+            [
+                'title' => i('Heading 2', 'allocate'),
+                'block' => 'h2'
+            ],
+            [
+                'title' => i('Heading 3', 'allocate'),
+                'block' => 'h3'
+            ],
+            [
+                'title' => i('Heading 4', 'allocate'),
+                'block' => 'h4'
+            ],
         ];
     }
 
@@ -111,6 +132,8 @@ class AllocateTheme extends Theme {
         $this->addStyle($this->directory().'css/blocks/slidein.less');
         $this->addStyle($this->directory().'css/blocks/loader.less');
         $this->addStyle($this->directory().'css/blocks/event-detail.less');
+        $this->addStyle($this->directory().'css/blocks/tabs.less');
+        $this->addStyle($this->directory().'css/blocks/table.less');
 
         $this->addStyle($this->directory().'css/blocks/components.less');
 

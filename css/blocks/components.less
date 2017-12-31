@@ -93,11 +93,53 @@
 .forge-sponsors {
     margin-top: 120px;
 
+    &.small {
+        .listing {
+            flex-wrap: wrap;
+
+            .listing-item {
+                display: flex;
+                min-width: 30%;
+                margin-bottom: 20px;
+
+                &:hover {
+                    .image img {
+                        width: 60px;
+                    }
+                }
+
+                .image {
+                    width: 120px;
+                    height: 70px;
+
+                    img {
+                        width: 50px;
+                    }
+                }
+
+                .additional {
+                    padding-left: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    h3 {
+                        margin-top: 0;
+                    }
+                }
+            }
+        } 
+    }
+
     &.reveal.in h2:after {
         width: 220px;
     }
 
     h2 {
+        &:empty {
+            display: none;
+        }
+
         margin-bottom: 30px;
         display: flex;
         align-items: center;
@@ -155,6 +197,44 @@
 .component-listing.forge-tournaments.teaser-listing {
     margin-top: 100px;
     margin-bottom: 30px;
+
+    &.small .listing {
+        .listing-item {
+            display: flex;
+
+            .image {
+                background-color: @color-bg-lighter;
+                width: 120px;
+                height: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 50px;
+                    justify-content: center;
+                    align-items: middle;
+                }
+
+                .cover {
+                    display: none;
+                }
+            }
+
+            .text {
+                position: static;
+                padding-left: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-bottom: 0;
+
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
 
     .listing {
         display: flex;
@@ -282,7 +362,7 @@
 
 .component.about-block {
     margin-top: 100px;
-    background-color: @color-bg-ligther;
+    background-color: @color-bg-lighter;
     padding: 90px 0;
 
     h2  {
@@ -322,6 +402,11 @@
             margin-right: 10px;
         }
     }
+}
+
+.text-content {
+    margin-top: 70px;
+    max-width: 760px;
 }
 
 

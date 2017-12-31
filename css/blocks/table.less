@@ -1,0 +1,62 @@
+table.default {
+    width: 100%;
+    thead {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+    tr {
+        th {
+            line-height: 30px;
+            padding: 10px 20px;
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    }
+
+    tbody {
+        tr {
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+
+            &.hasAction {
+                cursor: pointer;
+            }
+
+            &:hover {
+                td {
+                    background-color: rgba(255,255,255,0.02);
+                }
+            }
+
+            td {
+                padding: 3px 20px;
+                line-height: 40px;
+                transition: 300ms;
+                img {
+                    vertical-align: middle;
+                }
+
+                &:first-child {
+                    font-weight: 400;
+                }
+
+                div.actions a.btn-icon-container {
+                    margin-right: 5px;
+                }
+                &.actions a {
+                    display: inline-block;
+                    padding-top: 12px;
+                    margin-right: 3px;
+                    i {
+                        font-size: 16px;
+                    }
+                }
+
+                i {
+                    font-size: 16px;
+                    display: block;
+                    color: @color-gray-middle;
+                }
+            }
+        }
+    }
+}
