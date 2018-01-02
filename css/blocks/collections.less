@@ -142,7 +142,7 @@
     right: 0;
 }
 #seatplan {
-    .cell.§ight {
+    .cell.highlight {
         animation: pulse 2s infinite;
     }
 }
@@ -154,6 +154,28 @@
 #participants .compact-infobox {
     &.highlight {
         animation: pulse 2s infinite;   
+    }
+}
+
+#tournament-detail .hero {
+    position: relative;
+
+    &:after {
+        height: 4px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        content: '';
+        background-color: @color-primary;
+        z-index: 5;
+
+        animation: widthIn;
+        animation-delay: 1400ms;
+        animation-duration: 2000ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
     }
 }
 

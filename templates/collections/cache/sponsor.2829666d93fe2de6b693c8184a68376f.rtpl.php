@@ -1,4 +1,4 @@
-<?php if(!class_exists('raintpl')){exit;}?><div class="sponsor">
+<?php if(!class_exists('raintpl')){exit;}?><div class="sponsor wrapper">
     <span class="cta-light"><?php echo $lead;?></span>
     <h1><?php echo $title;?></h1>
     <div class="text">

@@ -131,7 +131,7 @@ class AllocateTheme extends Theme {
         $this->addStyle($this->directory().'css/blocks/messages.less');
         $this->addStyle($this->directory().'css/blocks/slidein.less');
         $this->addStyle($this->directory().'css/blocks/loader.less');
-        $this->addStyle($this->directory().'css/blocks/event-detail.less');
+        $this->addStyle($this->directory().'css/blocks/collections.less');
         $this->addStyle($this->directory().'css/blocks/tabs.less');
         $this->addStyle($this->directory().'css/blocks/table.less');
 
