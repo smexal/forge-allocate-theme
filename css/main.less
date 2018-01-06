@@ -186,7 +186,38 @@ small {
 .compact-infobox {
     background-color: @color-bg-lighter;
 
-    .avatar {
+    &:hover {
+        .icon-container .icon {
+            opacity: 1;
+        }
+    }
+
+    .icon-container .icon {
+        transition: 300ms;
+        opacity: .5;
+        color: @color-text-lighter;
+
+        &.highlight {
+            color: @color-secondary;
+        }
+        font-size: 24px;
+        text-align: center;
+        margin-top: 14px;
+    }
+
+    .icon-container, .avatar {
         box-shadow: @box-shadow;
     }
+}
+
+.status {
+    border: 1px solid @form-border-color;
+    border-radius: 50px;
+    text-transform: uppercase;
+    color: @color-text-lighter;
+    text-align: center;
+    padding: 10px 25px;
+    font-weight: 700;
+    font-size: 0.813em;
+    opacity: 0.7;
 }

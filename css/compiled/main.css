@@ -178,6 +178,32 @@ small + h3 {
 .compact-infobox {
   background-color: #212121;
 }
+.compact-infobox:hover .icon-container .icon {
+  opacity: 1;
+}
+.compact-infobox .icon-container .icon {
+  transition: 300ms;
+  opacity: .5;
+  color: #F2F2F2;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 14px;
+}
+.compact-infobox .icon-container .icon.highlight {
+  color: #00E676;
+}
+.compact-infobox .icon-container,
 .compact-infobox .avatar {
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+}
+.status {
+  border: 1px solid #3B3B3B;
+  border-radius: 50px;
+  text-transform: uppercase;
+  color: #F2F2F2;
+  text-align: center;
+  padding: 10px 25px;
+  font-weight: 700;
+  font-size: 0.813em;
+  opacity: 0.7;
 }

@@ -153,6 +153,7 @@ footer {
   border-bottom: none;
   box-shadow: none;
   background-color: #131313;
+  margin-top: 100px;
 }
 footer .wrapper .row {
   height: 80px;
