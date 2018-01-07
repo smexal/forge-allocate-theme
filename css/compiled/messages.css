@@ -50,3 +50,12 @@
 .alert a:hover {
   color: #4d4d4d;
 }
+#slidein-overlay .message-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#slidein-overlay .message-container .alert {
+  padding: 10px;
+  font-size: 0.8em;
+}

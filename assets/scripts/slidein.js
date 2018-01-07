@@ -8,6 +8,9 @@ var slidein = {
 
                 var url = $(this).attr('href');
                 slidein.open(url);
+
+                $("#slidein-overlay").attr('refresh-on-close', $(this).attr('refresh-on-close'));
+                $("#slidein-overlay").attr('refresh-target', $(this).attr('refresh-target'));
             });
         });
     },
@@ -27,6 +30,15 @@ var slidein = {
         slidein.loadData(url);
     },
 
+    refreshTarget : function(_url, _target) {
+        $.ajax({
+            url: _url,
+        }).done(function(data) {
+            $(_target).replaceWith($(data).find(_target));
+            $(document).trigger("ajaxReload");
+        });
+    },
+
     loadData : function (_url) {
         $.ajax({
             url: _url,
@@ -34,11 +46,20 @@ var slidein = {
             $("#slidein-overlay .content").html(data);
             $("#slidein-overlay").removeClass("loading");
             $("#slidein-overlay .content").addClass('has-content');
+            $(document).trigger("ajaxReload");
         });
     },
 
     close : function() {
         var overlay = $("#slidein-overlay");
+
+        var refreshUrl = overlay.attr('refresh-on-close');
+        var refreshTarget = overlay.attr('refresh-target');
+
+        if(typeof( refreshUrl ) !== 'undefined' && typeof(refreshTarget) !== 'undefined') {
+            this.refreshTarget(refreshUrl, refreshTarget);
+        }
+
         if($("body").hasClass('overlay-open')) {
             $("body").removeClass('overlay-open');
         }
@@ -67,6 +88,6 @@ var slidein = {
 
 
 }
-$(document).ready(function() {
-    slidein.init();
-})
+
+$(document).ready(slidein.init);
+$(document).on("ajaxReload", slidein.init);

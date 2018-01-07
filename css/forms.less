@@ -16,6 +16,18 @@ form + p.message {
         color: @color-primary;
     }
 }
+
+form {
+    .file-upload-default {
+        border-radius: 30px;
+        border: 1px solid @form-border-color;
+        display: flex;
+        padding: 10px 20px 0px 20px;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+}
+
 .form-group {
     position: relative;
     margin-bottom: 0;
@@ -79,6 +91,9 @@ form + p.message {
     }
 }
 
+h2 + form {
+    margin-top: 20px
+}
 
 /* Some Hacky Hack For not getting the form yellow ugly stuffz.... well you get it, if you got time.... */
 input:-webkit-autofill,
