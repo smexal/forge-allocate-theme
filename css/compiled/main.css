@@ -43,12 +43,17 @@ a {
   color: #FF1744;
   transition: 300ms;
 }
-a:hover {
+a:hover,
+a:focus,
+a:active {
   color: #F2F2F2;
   text-decoration: none;
 }
 a.block {
   display: block;
+}
+p {
+  max-width: 640px;
 }
 h1 {
   font-size: 2.250em;
@@ -73,6 +78,23 @@ p.feddow,
   color: #F2F2F2;
   font-weight: 700;
   margin-bottom: 25px;
+}
+h1 a,
+h2 a,
+h3 a {
+  color: #FFFFFF;
+}
+h1 a:active,
+h1 a:hover,
+h1 a:focus,
+h2 a:active,
+h2 a:hover,
+h2 a:focus,
+h3 a:active,
+h3 a:hover,
+h3 a:focus {
+  color: #FF1744;
+  text-decoration: none;
 }
 .page-header {
   border-bottom: none;

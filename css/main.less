@@ -59,7 +59,7 @@ a {
     color: @color-primary;
     transition: 300ms;
 
-    &:hover {
+    &:hover, &:focus, &:active {
         color: @color-text-lighter;
         text-decoration: none;
     }
@@ -67,6 +67,10 @@ a {
     &.block {
         display: block;
     }
+}
+
+p {
+    max-width: 640px;
 }
 
 h1 {
@@ -94,6 +98,16 @@ h3, p.feddow, .facts-block .main {
     color: @color-text-lighter;
     font-weight: 700;
     margin-bottom: 25px;
+}
+
+h1, h2, h3 {
+    a {
+        color: @color-text-main;
+        &:active, &:hover, &:focus {
+            color: @color-primary;
+            text-decoration: none;
+        }
+    }
 }
 
 .page-header {
