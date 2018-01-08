@@ -14,6 +14,9 @@
                     <div class="userarea">
                         <?php echo $userarea;?>
                     </div>
+                    <a class="more-navigation to-overlay" href="<?php echo $more_navigation_url;?>">
+                        <i class="ion-android-menu"></i>
+                    </a>
                 </div>
             </div>
         </header>

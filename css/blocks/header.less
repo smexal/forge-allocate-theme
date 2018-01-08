@@ -23,6 +23,50 @@ header, footer, .subnavigation {
         display: flex;
         justify-content: space-between;
 
+        .more-navigation {
+            cursor: pointer;
+            height: 69px;
+            width: 69px;
+            border-right: 1px solid @header-border-color;
+            display: flex;
+            justify-content: center;
+            align-items: middle;
+
+            &:hover {
+                i {
+                    color: @color-primary;
+                }
+            }
+
+            i {
+                transition: 300ms;
+                color: @color-text-main;
+                font-size: 20px;
+                line-height: 69px;
+            }
+        }
+
+        .userarea {
+            border-left: 1px solid @header-border-color;
+            border-right: 1px solid  @header-border-color;
+
+            .loggedin-as {
+                padding-right: 20px;
+            }
+
+            button {
+                border: none;
+                padding: 0;
+                color: @color-text-main;
+
+                &:hover {
+                    background-color: transparent;
+                    color: @color-primary;
+                    box-shadow: none;
+                }
+            }
+        }
+
         .left {
             display: flex;
         }
@@ -67,8 +111,6 @@ header, footer, .subnavigation {
 
                 &:hover {
                     i.icon {
-                        position: relative;
-                        top: 3px;
                         color: @color-primary;
                     }
                 }
@@ -164,4 +206,27 @@ footer {
 .subnavigation {
     position: relative;
     z-index: 5;
+}
+
+nav.more-navigation {
+    ul {
+        list-style: none;
+
+        li {
+            line-height: 50px;
+            border-bottom: 1px solid @header-border-color;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            a {
+                color: @color-text-main;
+
+                &:hover {
+                    color: @color-primary;
+                }
+            }
+        }
+    }
 }

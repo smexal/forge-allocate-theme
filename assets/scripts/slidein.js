@@ -1,7 +1,7 @@
 var slidein = {
 
     init : function() {
-        $("a.to-overlay").each(function() {
+        $("button.to-overlay, a.to-overlay").each(function() {
             $(this).on('click', function(e) {
                 e.stopImmediatePropagation();
                 e.preventDefault();

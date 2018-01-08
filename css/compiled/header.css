@@ -9,7 +9,7 @@ footer,
 .subnavigation {
   height: 70px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
-  border-bottom: 1px solid #272727;
+  border-bottom: 1px solid #2d2d2d;
 }
 header .wrapper,
 footer .wrapper,
@@ -18,6 +18,55 @@ footer .wrapper,
   padding: 0 15px;
   display: flex;
   justify-content: space-between;
+}
+header .wrapper .more-navigation,
+footer .wrapper .more-navigation,
+.subnavigation .wrapper .more-navigation {
+  cursor: pointer;
+  height: 69px;
+  width: 69px;
+  border-right: 1px solid #2d2d2d;
+  display: flex;
+  justify-content: center;
+  align-items: middle;
+}
+header .wrapper .more-navigation:hover i,
+footer .wrapper .more-navigation:hover i,
+.subnavigation .wrapper .more-navigation:hover i {
+  color: #FF1744;
+}
+header .wrapper .more-navigation i,
+footer .wrapper .more-navigation i,
+.subnavigation .wrapper .more-navigation i {
+  transition: 300ms;
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 69px;
+}
+header .wrapper .userarea,
+footer .wrapper .userarea,
+.subnavigation .wrapper .userarea {
+  border-left: 1px solid #2d2d2d;
+  border-right: 1px solid #2d2d2d;
+}
+header .wrapper .userarea .loggedin-as,
+footer .wrapper .userarea .loggedin-as,
+.subnavigation .wrapper .userarea .loggedin-as {
+  padding-right: 20px;
+}
+header .wrapper .userarea button,
+footer .wrapper .userarea button,
+.subnavigation .wrapper .userarea button {
+  border: none;
+  padding: 0;
+  color: #FFFFFF;
+}
+header .wrapper .userarea button:hover,
+footer .wrapper .userarea button:hover,
+.subnavigation .wrapper .userarea button:hover {
+  background-color: transparent;
+  color: #FF1744;
+  box-shadow: none;
 }
 header .wrapper .left,
 footer .wrapper .left,
@@ -44,7 +93,7 @@ footer .wrapper .right i.icon,
 header .wrapper .right .userarea .user-info,
 footer .wrapper .right .userarea .user-info,
 .subnavigation .wrapper .right .userarea .user-info {
-  border-left: 1px solid #272727;
+  border-left: 1px solid #2d2d2d;
   cursor: pointer;
   display: flex;
   height: 100%;
@@ -70,8 +119,6 @@ footer .wrapper .right .userarea .user-nav ul li:last-child,
 header .wrapper .right .userarea:hover i.icon,
 footer .wrapper .right .userarea:hover i.icon,
 .subnavigation .wrapper .right .userarea:hover i.icon {
-  position: relative;
-  top: 3px;
   color: #FF1744;
 }
 header .wrapper .right > div,
@@ -164,4 +211,20 @@ footer .wrapper .row {
 .subnavigation {
   position: relative;
   z-index: 5;
+}
+nav.more-navigation ul {
+  list-style: none;
+}
+nav.more-navigation ul li {
+  line-height: 50px;
+  border-bottom: 1px solid #2d2d2d;
+}
+nav.more-navigation ul li:last-child {
+  border-bottom: none;
+}
+nav.more-navigation ul li a {
+  color: #FFFFFF;
+}
+nav.more-navigation ul li a:hover {
+  color: #FF1744;
 }

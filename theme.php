@@ -13,6 +13,7 @@ use Forge\Themes\Allocate\ThemeSettings;
 use Forge\Themes\Allocate\UserArea;
 
 
+
 class AllocateTheme extends Theme {
     public $lessVariables = [];
 
@@ -88,6 +89,7 @@ class AllocateTheme extends Theme {
 
     private function registerNavigations() {
         ContentNavigation::registerPosition('main-navigation', i('Main Navigation', 'allocate'));
+        ContentNavigation::registerPosition('more-navigation', i('Sidebar Navigation in Hamburger', 'allocate'));
         ContentNavigation::registerPosition('user-nav', i('User Navigation', 'allocate'));
     }
 
@@ -102,7 +104,8 @@ class AllocateTheme extends Theme {
             'home_url' => Utils::getHomeUrl(),
             'bodyclass' => 'theme-'.$this->tSettings->getSchema(),
             'main_navigation' => ContentNavigation::getNavigationList('main-navigation'),
-            'userarea' => $this->userArea->output()
+            'userarea' => $this->userArea->output(),
+            'more_navigation_url' => App::instance()->vm->getViewByName('more-navigation')->buildURL()
         ];
     }
 

@@ -27,8 +27,12 @@ body > .content {
 }
 .wrapper,
 .wrapped {
-  max-width: 1150px;
+  max-width: 1180px;
   margin: 0 auto;
+}
+.wrapper.smaller,
+.wrapped.smaller {
+  max-width: 760px;
 }
 .boxed {
   margin-top: 100px;

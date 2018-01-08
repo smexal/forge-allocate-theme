@@ -137,7 +137,7 @@ class ThemeSettings {
                 'color-grey-light' => '#333333',
                 'color-grey' => '#767676',
                 'box-shadow' => '0 2px 4px 0 rgba(0,0,0,0.5)',
-                'header-border-color' => '#272727',
+                'header-border-color' => '#2d2d2d',
                 'nav-color' => '#E2E2E2',
                 'cta-color' => '#B3B3B3',
                 'color-text-main' => '#FFFFFF',
