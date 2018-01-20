@@ -70,7 +70,8 @@ form {
     input[type="text"],
     input[type="password"],
     textarea,
-    .bootstrap-tagsinput {
+    .bootstrap-tagsinput,
+    .chosen-container {
         padding: 14px 20px 6px 20px;
         line-height: 24px;
         background: transparent;
@@ -88,6 +89,68 @@ form {
             outline: none;
             border-color: @color-primary;
         }
+    }
+}
+.multiselect label {
+    display: none;
+}
+.form-group > .chosen-container {
+    padding: 10px 20px 10px 20px;
+}
+.form-group {
+    .chosen-container {
+        font-family: inherit !important;
+
+        .chosen-drop {
+            background-color: @form-border-color;
+            border: none;
+            width: 80%;
+
+            .chosen-results {
+                background-color: @form-border-color;
+            }
+
+            .active-result {
+                color: @color-text-main;
+
+                &.highlighted {
+                    background-image: none;
+                    background-color: @color-primary;
+                }
+            }
+            .result-selected {
+                color: @color-text-main;
+                opacity: .5;
+            }
+        }
+
+        .chosen-choices {
+            background: transparent;
+            border: none;
+
+            input.chosen-search-input {
+                font-family: @font-family !important;
+            }
+
+            li.search-choice {
+                background-color: @form-border-color;
+                color: @color-text-main;
+                background-image: none;
+                box-shadow: none;
+                border: 1px solid darken(@form-border-color, 10%)
+            }
+        }
+    }
+}
+
+.form-group.select.contains-chosen {
+    label {
+        display: none;
+    }
+    .chosen-container-single .chosen-single {
+        background: none;
+        border: none;
+        box-shadow: none;
     }
 }
 

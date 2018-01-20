@@ -10,6 +10,11 @@
     animation-iteration-count: 1;
     animation-fill-mode: both;
 
+    .col-lg-12 {
+        z-index: 3;
+        position: relative;
+    }
+
     h1 {
         z-index: 3;
         position: relative;
@@ -178,6 +183,15 @@
         animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
     }
 }
+#slidein-overlay {
+    .login {
+        max-width: 100%;
+        .col-lg-6.col-lg-offset-3 {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
 
 .price-phases {
     margin-top: 70px;
@@ -237,13 +251,17 @@
         justify-content: center;
 
         img {
-            height: 140px;
+            max-height: 140px;
         }
     }
 
     .member-tabs {
         margin-top: 30px;
     }
+}
+
+.signup-form {
+    margin-top: 20px;
 }
 
 @keyframes pulse {

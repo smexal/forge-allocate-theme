@@ -2,7 +2,7 @@ var slidein = {
 
     init : function() {
         $("button.to-overlay, a.to-overlay").each(function() {
-            $(this).on('click', function(e) {
+            $(this).unbind('click').on('click', function(e) {
                 e.stopImmediatePropagation();
                 e.preventDefault();
 
@@ -34,8 +34,13 @@ var slidein = {
         $.ajax({
             url: _url,
         }).done(function(data) {
-            $(_target).replaceWith($(data).find(_target));
+            var newContent = $(data);
+            if($(data).find(_target).length != 0) {
+                newContent = $(data).find(_target);
+            }
+            $(_target).replaceWith(newContent);
             $(document).trigger("ajaxReload");
+            $(window).trigger("scroll");
         });
     },
 
@@ -55,6 +60,9 @@ var slidein = {
 
         var refreshUrl = overlay.attr('refresh-on-close');
         var refreshTarget = overlay.attr('refresh-target');
+
+        overlay.removeAttr('refresh-on-close');
+        overlay.removeAttr('refresh-target');
 
         if(typeof( refreshUrl ) !== 'undefined' && typeof(refreshTarget) !== 'undefined') {
             this.refreshTarget(refreshUrl, refreshTarget);
@@ -79,7 +87,7 @@ var slidein = {
         $("#slidein-overlay > .close").unbind('click').on('click', function() {
             slidein.close();
         });
-        $(document).keyup(function(e) {
+        $(document).unbind('keyup').keyup(function(e) {
             if (e.keyCode === 27) {
                 slidein.close();
             }
