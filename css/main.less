@@ -26,6 +26,11 @@ body {
         }
     }
 }
+@media only screen and (max-width: 375px) {
+    body {
+        font-size: 14px;
+    }
+}
 
 html {
    height: 100%;
@@ -103,6 +108,17 @@ h3, p.feddow, .facts-block .main {
     font-weight: 700;
     margin-bottom: 25px;
 }
+
+@media only screen and (max-width: 375px) {
+    h1 {
+        font-size: 1.65em;
+    }
+    h4 {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+
 
 h1, h2, h3 {
     a {
@@ -254,4 +270,10 @@ small {
 
 .message-container .alert {
     background-color: @color-secondary;
+}
+
+@media only screen and (max-width: 1024px) {
+    .wrapped, .wrapper {
+        margin: 0 20px;
+    }
 }

@@ -16,6 +16,11 @@ body.overlay-open > .content,
 body.overlay-open > header {
   opacity: 0.3;
 }
+@media only screen and (max-width: 375px) {
+  body {
+    font-size: 14px;
+  }
+}
 html {
   height: 100%;
 }
@@ -82,6 +87,15 @@ p.feddow,
   color: #F2F2F2;
   font-weight: 700;
   margin-bottom: 25px;
+}
+@media only screen and (max-width: 375px) {
+  h1 {
+    font-size: 1.65em;
+  }
+  h4 {
+    font-size: 14px;
+    font-weight: bold;
+  }
 }
 h1 a,
 h2 a,
@@ -246,4 +260,10 @@ small + h3 {
 }
 .message-container .alert {
   background-color: #00E676;
+}
+@media only screen and (max-width: 1024px) {
+  .wrapped,
+  .wrapper {
+    margin: 0 20px;
+  }
 }

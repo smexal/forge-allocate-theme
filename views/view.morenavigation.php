@@ -12,7 +12,8 @@ class MorenavigationView extends View {
     public $standalone = true;
 
     public function content($parts=[]) {
-        return ContentNavigation::getNavigationList('more-navigation');
+        $main = ContentNavigation::getNavigationList('main-navigation');
+        return $main.ContentNavigation::getNavigationList('more-navigation');
     }
 
 }

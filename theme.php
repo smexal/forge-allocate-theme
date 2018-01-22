@@ -156,7 +156,15 @@ class AllocateTheme extends Theme {
     }
 
     public function customHeader() {
-        return '';
+        $variables = $this->tSettings->getLessVariables();
+        $favicon = new Media(Settings::get('favicon'));
+        return '
+            <link rel="apple-touch-icon" sizes="180x180" href="'.$favicon->getSizedImage(180, 180).'">
+            <link rel="icon" type="image/png" sizes="32x32" href="'.$favicon->getSizedImage(32, 32).'">
+            <link rel="icon" type="image/png" sizes="16x16" href="'.$favicon->getSizedImage(16, 16).'">
+            <meta name="theme-color" content="'.$variables['color-bg'].'">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        ';
     }
 }
 

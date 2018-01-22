@@ -66,6 +66,15 @@ class ThemeSettings {
             ], Settings::get('site-logo')
         ), 'site-logo', 'left', 'allocate');
 
+        // Favicon
+        $this->cs->registerField(
+            Fields::image([
+                'key' => 'favicon',
+                'label' => i('Choose/Upload your favicon.', 'allocate'),
+                'hint' => i('This icon will be displayed in the browser tab or favorites.', 'allocate')
+            ], Settings::get('favicon')
+        ), 'favicon', 'left', 'allocate');
+
         // Brand Primary Color
         $this->cs->registerField(
             Fields::text([

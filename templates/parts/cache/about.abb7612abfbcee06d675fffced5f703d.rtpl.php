@@ -1,7 +1,7 @@
 <?php if(!class_exists('raintpl')){exit;}?><div class="component about-block reveal">
     <div class="wrapper">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-7">
                 <h2><?php echo $title;?></h2>
                 <p><?php echo $description;?></p>
                 <div class="row">
@@ -16,9 +16,9 @@
                 </div>
                 <a href="<?php echo $cta_link;?>" class="btn btn-primary"><?php echo $cta_label;?></a>
             </div>
-            <div class="col-lg-1">
+            <div class="col-lg-1 col-md-1">
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-5 col-md-4">
                 <?php echo $mc_form;?>
 
                 <div class="social">

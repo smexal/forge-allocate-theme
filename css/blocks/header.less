@@ -11,11 +11,55 @@ body.theme-light {
         color: darken(@nav-color, 10%);
     }
 }
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: @color-bg;
+
+    + .content {
+        padding-top: 40px;
+    }
+}
 
 header, footer, .subnavigation {
     height: @header-height;
     box-shadow: @box-shadow;
     border-bottom: 1px solid @header-border-color;
+
+    @media only screen and (max-width: 1024px) {
+        .main-navigation {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 375px) {
+        height: 60px;
+
+        .wrapper {
+            margin: 0;
+        }
+
+        .logo {
+            width: 90px;
+        }
+
+        .userarea {
+            .btn {
+                min-width: 100px;
+            }
+            #login-form {
+                left: 0;
+                right: 0;
+                position: fixed;
+                width: 100%;
+                top: 59px;
+                border-left: 0;
+                border-right: 0;
+            }
+        }
+    }
 
     .wrapper {
         height: 100%;
@@ -208,7 +252,29 @@ footer {
     z-index: 5;
 }
 
-nav.more-navigation {
+#slidein-overlay nav.main-navigation {
+    display: none;
+}
+
+@media only screen and (max-width: 1025px) {
+
+    #slidein-overlay nav.main-navigation {
+        display: block;
+    }
+    header .wrapper .main-navigation {
+        display: none;
+    }
+
+    header .wrapper {
+        padding-right: 0;
+
+        a.more-navigation {
+            border-right: none;
+        }
+    }
+}
+
+nav.more-navigation, #slidein-overlay nav.main-navigation {
     ul {
         list-style: none;
 

@@ -17,6 +17,19 @@
         .right {
             justify-content: flex-end;
         }
+
+        @media only screen and (max-width: 375px) {
+            padding: 10px;
+
+            div {
+                min-height: 44px;
+                height: auto;
+            }
+
+            .right {
+                display: none;
+            }
+        }
     }
 }
 
@@ -66,6 +79,20 @@
             background-color: @color-primary;
         }
     }
+
+    @media only screen and (max-width: 375px) {
+        h1, .text, .actions {
+            padding: 0 10px 0 10px;
+        }
+
+        .row {
+            display: block;
+
+            img {
+                margin-top: 20px;
+            }
+        }
+    } 
 }
 
 .forge-events-block {
@@ -74,6 +101,16 @@
     &:not(.in) {
         .bar {
             width: 0% !important;
+        }
+    }
+
+    @media only screen and (max-width: 375px) {
+        .row {
+            display: block;
+
+            .col-lg-4 {
+                margin-top: 20px;
+            }
         }
     }
 }
@@ -163,6 +200,7 @@
     .listing {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         .discreet {
             color: @color-text-main;
@@ -170,6 +208,7 @@
 
         .listing-item {
             width: 23%;
+            margin-bottom: 20px;
 
             &:hover {
                 .image img {
@@ -192,6 +231,21 @@
             h3 {
                 margin-top: 10px;
                 margin-bottom: 0;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 375px) {
+        .listing .listing-item {
+            width: 45%;
+
+            .image {
+                height: 120px;
+
+                img {
+                    transition: 300ms;
+                    width: 90px;
+                }
             }
         }
     }
@@ -317,6 +371,21 @@
             }
         }
     }
+
+    @media only screen and (max-width: 375px) {
+        .listing .listing-item {
+            min-width: 100%;
+
+            .text {
+                padding-left: 30px;
+                margin-bottom: 15px;
+
+                &:before {
+                    left: 15px;
+                }
+            }
+        }
+    }
 }
 
 .news-teaser {
@@ -361,6 +430,23 @@
             width: 30%;
         }
     }
+
+    @media only screen and (max-width: 375px) {
+        margin-top: 40px;
+        .blocks .col-lg-12 {
+            flex-wrap: wrap;
+
+            .block {
+                min-width: 100%;
+                margin-bottom: 20px;
+
+                h3 {
+                    min-height: auto;
+                }
+            }
+        }
+    }
+
 }
 
 .component.about-block {
@@ -392,6 +478,18 @@
 
             .btn {
                 height: 40px;
+            }
+
+            @media only screen and (max-width: 1024px) {
+                flex-direction: column;
+
+                input[type="text"] {
+                    width: 100%;
+                }
+
+                .btn {
+                    width: 100%;
+                }
             }
         }
     }
