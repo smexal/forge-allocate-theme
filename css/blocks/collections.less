@@ -1,7 +1,7 @@
 .hero {
     height: 440px;
     position: relative;
-    background-size: 100%;
+    background-size: cover;
 
     opacity: 0;
     animation: fadeIn;
@@ -75,7 +75,16 @@
         display: block;
     }
 }
+@media only screen and (max-width: 420px) {
+    #seatplan > .row {
+        max-width: 100%;
+        overflow: auto;
+    }
+    #seatplan .seatplan {
+        width: 480px;
+    }
 
+}
 .seatplan {
     border: none;
 
@@ -130,7 +139,9 @@
     margin-right: 15px;
     margin-bottom: 15px;
 
-    min-width: 320px;
+    @media only screen and (min-width: 420px) {
+        min-width: 320px;
+    }
 }
 
 .search-field.form-group {
@@ -212,6 +223,18 @@
             align-items: center;
             border-bottom: 1px solid @form-border-color;
 
+            @media only screen and (max-width: 420px) {
+                flex-direction: column;
+                padding-bottom: 15px;
+
+                .left {
+                    width: 100%;
+                }
+                .status {
+                    width: 100%;
+                }
+            }
+
             .left {
                 display: flex;
 
@@ -279,7 +302,7 @@
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 420px) {
     .hero {
         height: 120px;
 

@@ -9,9 +9,15 @@
   font-size: 0.813em;
   text-transform: uppercase;
   min-width: 130px;
+  margin-bottom: 15px;
   line-height: 20px !important;
   padding: 6px 30px;
   transition: 300ms;
+}
+@media only screen and (max-width: 420px) {
+  .btn {
+    width: 100%;
+  }
 }
 .btn.loading {
   color: rgba(255,255,255,0);

@@ -18,6 +18,13 @@
   -webkit-animation: animate-smack 750ms linear both;
   animation: animate-smack 750ms linear both;
 }
+@media only screen and (max-width: 420px) {
+  .userarea .overlay-fitsize {
+    width: 100%;
+    position: fixed;
+    top: 59px;
+  }
+}
 .userarea .loggedin-as {
   display: flex;
   align-items: center;

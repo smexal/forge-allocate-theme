@@ -23,6 +23,33 @@ header {
     }
 }
 
+.content > .subnavigation {
+    top: 25px;
+    background-color: @color-bg;
+
+    @media only screen and (max-width: 420px) {
+        top: 20px;
+        height: auto;
+        nav {
+            width: 100%;
+
+            ul {
+                width: 100%;
+                flex-direction: column;
+
+                li {
+                    line-height: 30px;
+                    width: 100%;
+
+                    &.active:after {
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
 header, footer, .subnavigation {
     height: @header-height;
     box-shadow: @box-shadow;
@@ -34,7 +61,7 @@ header, footer, .subnavigation {
         }
     }
 
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 420px) {
         height: 60px;
 
         .wrapper {
@@ -48,6 +75,7 @@ header, footer, .subnavigation {
         .userarea {
             .btn {
                 min-width: 100px;
+                margin-bottom: 0;
             }
             #login-form {
                 left: 0;
@@ -101,6 +129,7 @@ header, footer, .subnavigation {
             button {
                 border: none;
                 padding: 0;
+                margin-bottom: 0;
                 color: @color-text-main;
 
                 &:hover {
@@ -143,6 +172,10 @@ header, footer, .subnavigation {
 
                         li {
                             line-height: 60px;
+                            @media only screen and (max-width: 420px) {
+                                line-height: 40px;
+                            }
+
                             border-bottom: 1px solid @color-gray;
                             font-size: 0.875em;
 

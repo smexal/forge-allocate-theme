@@ -18,7 +18,7 @@
             justify-content: flex-end;
         }
 
-        @media only screen and (max-width: 375px) {
+        @media only screen and (max-width: 420px) {
             padding: 10px;
 
             div {
@@ -80,7 +80,7 @@
         }
     }
 
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 420px) {
         h1, .text, .actions {
             padding: 0 10px 0 10px;
         }
@@ -104,7 +104,7 @@
         }
     }
 
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 420px) {
         .row {
             display: block;
 
@@ -136,11 +136,17 @@
     &.small {
         .listing {
             flex-wrap: wrap;
+            @media only screen and (max-width: 420px) {
+                flex-direction: column;
+            }
 
             .listing-item {
                 display: flex;
                 min-width: 30%;
                 margin-bottom: 20px;
+                @media only screen and (max-width: 420px) {
+                    width: 100%;
+                }
 
                 &:hover {
                     .image img {
@@ -213,6 +219,9 @@
             &:hover {
                 .image img {
                     width: 140px;
+                    @media only screen and (max-width: 420px) {
+                        width: 100px;
+                    }
                 }
             }
 
@@ -235,7 +244,7 @@
         }
     }
 
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 420px) {
         .listing .listing-item {
             width: 45%;
 
@@ -255,6 +264,10 @@
     margin-top: 100px;
     margin-bottom: 30px;
 
+    @media only screen and (max-width: 420px) {
+        margin-top: 50px;
+    }
+
     &.small .listing {
         .listing-item {
             display: flex;
@@ -262,6 +275,12 @@
             .image {
                 background-color: @color-bg-lighter;
                 width: 120px;
+
+                @media only screen and (max-width: 420px) {
+                    width: 100px;                    
+                    max-width: 100px;
+                    min-width: 100px;
+                }
                 height: 70px;
                 display: flex;
                 justify-content: center;
@@ -372,7 +391,7 @@
         }
     }
 
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 420px) {
         .listing .listing-item {
             min-width: 100%;
 
@@ -431,7 +450,7 @@
         }
     }
 
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 420px) {
         margin-top: 40px;
         .blocks .col-lg-12 {
             flex-wrap: wrap;
