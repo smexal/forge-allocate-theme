@@ -12,15 +12,13 @@ header {
   background-color: #1A1A1A;
 }
 header + .content {
-  padding-top: 40px;
+  padding-top: 70px;
 }
 .content > .subnavigation {
-  top: 25px;
   background-color: #1A1A1A;
 }
 @media only screen and (max-width: 420px) {
   .content > .subnavigation {
-    top: 20px;
     height: auto;
   }
   .content > .subnavigation nav {
