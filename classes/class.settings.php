@@ -101,6 +101,15 @@ class ThemeSettings {
                 'hint' => i('Enter the name of a Google Font', 'allocate')
             ], Settings::get('font')
         ), 'font', 'right', 'allocate');
+
+        // Font
+        $this->cs->registerField(
+            Fields::textarea([
+                'key' => 'custom_js',
+                'label' => i('Custom HTML/Javascript for the Header', 'allocate'),
+                'hint' => i('e.g. for Google Analytics', 'allocate')
+            ], Settings::get('custom_js')
+        ), 'custom_js', 'right', 'allocate');
     }
 
     /**

@@ -103,6 +103,7 @@ class AllocateTheme extends Theme {
             'logo_url' => $logo ? $logo->getUrl() : false,
             'home_url' => Utils::getHomeUrl(),
             'bodyclass' => 'theme-'.$this->tSettings->getSchema(),
+            'custom_js' => Settings::get('custom_js'),
             'main_navigation' => ContentNavigation::getNavigationList('main-navigation'),
             'userarea' => $this->userArea->output(),
             'more_navigation_url' => App::instance()->vm->getViewByName('more-navigation')->buildURL()

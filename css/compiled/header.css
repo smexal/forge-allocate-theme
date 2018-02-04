@@ -12,7 +12,7 @@ header {
   background-color: #1A1A1A;
 }
 header + .content {
-  padding-top: 40px;
+  padding-top: 70px;
 }
 .content > .subnavigation {
   background-color: #1A1A1A;
@@ -290,7 +290,6 @@ footer .wrapper .row {
   align-items: center;
 }
 .subnavigation {
-  margin-top: 30px;
   position: relative;
   z-index: 5;
 }

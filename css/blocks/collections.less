@@ -124,9 +124,13 @@
     }
 }
 
-#participants {
+#participants, .forge-organizations {
     flex-wrap: wrap;
     margin-top: 40px;
+
+    h2 {
+        margin-bottom: 30px;
+    }
 
     .avatar-placeholder {
         text-align: center;
@@ -138,6 +142,13 @@
 .compact-infobox {
     margin-right: 15px;
     margin-bottom: 15px;
+
+    a {
+        color: @color-text-main;
+        &:hover {
+            color: @color-primary;
+        }
+    }
 
     @media only screen and (min-width: 420px) {
         min-width: 320px;
