@@ -2,6 +2,7 @@
 namespace Forge\Themes\Allocate\Collections;
 
 use Forge\Core\App\App;
+use Forge\Core\Classes\Media;
 use \Forge\Core\Abstracts\DataCollection;
 
 class SponsorsCollection extends DataCollection {
@@ -44,12 +45,14 @@ class SponsorsCollection extends DataCollection {
 
     public function render($item) {
         $dir = App::instance()->getThemeDirectory()."templates/collections/";
+        $image = new Media($item->getMeta('image'));
         return App::instance()->render($dir, 'sponsor', [
             'title' => $item->getMeta('title'),
             'lead' => $item->getMeta('description'),
             'text' => $item->getMeta('text'),
             'website' => $item->getMeta('website'),
-            'visit_website' => i('Visit sponsor website', 'allocate')
+            'visit_website' => i('Visit sponsor website', 'allocate'),
+            'image' => $image->getUrl()
         ]);
     }
 }

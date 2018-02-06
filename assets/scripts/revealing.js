@@ -1,6 +1,6 @@
 var revealing = {
-    timer : 250,
-    visibility : 30,
+    timer : 150,
+    visibility : 20,
 
     init : function() {
         revealing.check();
