@@ -131,13 +131,16 @@ header .wrapper .userarea button,
 footer .wrapper .userarea button,
 .subnavigation .wrapper .userarea button {
   border: none;
-  padding: 0;
+  padding: 0 30px;
   margin-bottom: 0;
   color: #FFFFFF;
 }
 header .wrapper .userarea button:hover,
+header .wrapper .userarea button:focus,
 footer .wrapper .userarea button:hover,
-.subnavigation .wrapper .userarea button:hover {
+footer .wrapper .userarea button:focus,
+.subnavigation .wrapper .userarea button:hover,
+.subnavigation .wrapper .userarea button:focus {
   background-color: transparent;
   color: #FF1744;
   box-shadow: none;

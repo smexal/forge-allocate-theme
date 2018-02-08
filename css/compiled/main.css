@@ -261,6 +261,11 @@ small + h3 {
   font-size: 0.813em;
   opacity: 0.7;
 }
+hr {
+  border: none;
+  border-bottom: 1px solid #3B3B3B;
+  background: none;
+}
 .not-bubble {
   display: inline-block;
   background-color: #FF1744;

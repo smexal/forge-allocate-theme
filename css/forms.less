@@ -82,7 +82,8 @@ form {
     input[type="password"],
     textarea,
     .bootstrap-tagsinput,
-    .chosen-container {
+    .chosen-container,
+    select {
         padding: 14px 20px 6px 20px;
         line-height: 24px;
         background: transparent;
@@ -103,6 +104,17 @@ form {
             box-shadow: none;
             outline: none;
             border-color: @color-primary;
+        }
+    }
+
+    &.select {
+        label {
+            left: 0;
+            top: 0;
+        }
+        select {
+            padding-top: 12px;
+            padding-bottom: 12px;
         }
     }
 }

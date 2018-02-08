@@ -72,7 +72,8 @@ form .file-upload-default {
 .form-group input[type="password"],
 .form-group textarea,
 .form-group .bootstrap-tagsinput,
-.form-group .chosen-container {
+.form-group .chosen-container,
+.form-group select {
   padding: 14px 20px 6px 20px;
   line-height: 24px;
   background: transparent;
@@ -87,7 +88,8 @@ form .file-upload-default {
   .form-group input[type="password"],
   .form-group textarea,
   .form-group .bootstrap-tagsinput,
-  .form-group .chosen-container {
+  .form-group .chosen-container,
+  .form-group select {
     width: 100%;
   }
 }
@@ -95,10 +97,19 @@ form .file-upload-default {
 .form-group input[type="password"]:focus,
 .form-group textarea:focus,
 .form-group .bootstrap-tagsinput:focus,
-.form-group .chosen-container:focus {
+.form-group .chosen-container:focus,
+.form-group select:focus {
   box-shadow: none;
   outline: none;
   border-color: #FF1744;
+}
+.form-group.select label {
+  left: 0;
+  top: 0;
+}
+.form-group.select select {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 .multiselect label {
   display: none;

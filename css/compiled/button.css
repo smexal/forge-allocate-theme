@@ -8,11 +8,19 @@
   font-weight: 700;
   font-size: 0.813em;
   text-transform: uppercase;
-  min-width: 130px;
   margin-bottom: 15px;
   line-height: 20px !important;
   padding: 6px 30px;
   transition: 300ms;
+}
+.btn i {
+  font-size: 18px;
+}
+.btn.has-icon {
+  padding: 6px 15px;
+}
+.btn:focus {
+  color: #FF1744;
 }
 @media only screen and (max-width: 420px) {
   .btn {
