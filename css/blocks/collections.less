@@ -10,17 +10,33 @@
     animation-iteration-count: 1;
     animation-fill-mode: both;
 
+    &.reduced {
+        height: 310px;
+
+        h1 {
+            margin-top: 0;
+        }
+    }
+
     .col-lg-12 {
         z-index: 3;
         position: relative;
     }
 
-    h1 {
+    .bar-left {
         z-index: 3;
         position: relative;
         max-width: 360px;
 
         padding-left: 30px;
+
+        h1 {
+            margin-bottom: 0;
+
+            + .signup {
+                margin-top: 20px;
+            }
+        }
 
         &:before {
             position: absolute;
@@ -41,7 +57,6 @@
     .signup {
         position: relative;
         z-index: 3;
-        padding-left: 30px;
         animation: fadeIn;
         animation-delay: 500ms;
         animation-duration: 400ms;
