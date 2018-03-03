@@ -6,10 +6,20 @@ table.default {
     tr {
         th {
             line-height: 30px;
-            padding: 10px 20px;
+            padding: 3px 14px;
             font-size: 11px;
             font-weight: 500;
             text-transform: uppercase;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            h3 {
+                margin: 0;
+                text-transform: none;
+                font-size: 150%;
+            }
         }
     }
 
@@ -28,9 +38,13 @@ table.default {
             }
 
             td {
-                padding: 3px 20px;
+                padding: 3px 14px;
                 line-height: 40px;
                 transition: 300ms;
+
+                &:first-child {
+                    padding-left: 0;
+                }
                 img {
                     vertical-align: middle;
                 }
