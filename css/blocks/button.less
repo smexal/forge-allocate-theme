@@ -9,6 +9,9 @@
     font-size: 0.813em;
     text-transform: uppercase;
     margin-bottom: 15px;
+    line-height: 20px !important;
+    padding: 7px 30px 5px 30px;
+    transition: 300ms;
 
     i {
         font-size: 18px;
@@ -22,14 +25,9 @@
         color: @color-primary;
     }
 
-    @media only screen and (max-width: 420px) {
+    @media only screen and (max-width: 570px) {
         width: 100%;
     }
-
-    line-height: 20px !important;
-    padding: 6px 30px;
-
-    transition: 300ms;
 
     &.loading {
         color: rgba(255, 255, 255, 0);
@@ -38,7 +36,9 @@
     &:hover {
         border: 1px solid @color-primary;
         box-shadow: @box-shadow;
-        color: @cta-color;
+        color: @color-primary;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
         background-color: rgba(255, 255, 255, 0.05)
     }
 

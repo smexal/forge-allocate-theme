@@ -11,7 +11,7 @@ use \Forge\Core\Components\ListingComponent;
 
 class SponsorlistingComponent extends ListingComponent {
     protected $collection = 'forge-sponsors';
-    protected $cssClasses = ['wrapper', 'reveal'];
+    protected $cssClasses = ['wrapper'];
 
     public function prefs() {
         $this->settings = array_merge([

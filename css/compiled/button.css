@@ -10,7 +10,7 @@
   text-transform: uppercase;
   margin-bottom: 15px;
   line-height: 20px !important;
-  padding: 6px 30px;
+  padding: 7px 30px 5px 30px;
   transition: 300ms;
 }
 .btn i {
@@ -22,7 +22,7 @@
 .btn:focus {
   color: #FF1744;
 }
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 570px) {
   .btn {
     width: 100%;
   }
@@ -33,7 +33,9 @@
 .btn:hover {
   border: 1px solid #FF1744;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
-  color: #B3B3B3;
+  color: #FF1744;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
   background-color: rgba(255,255,255,0.05);
 }
 .btn.btn-primary {

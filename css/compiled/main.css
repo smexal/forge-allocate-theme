@@ -96,6 +96,7 @@ h2 {
 }
 h3,
 p.feddow,
+p.highlight,
 .facts-block .main {
   font-size: 1.313em;
   color: #F2F2F2;
@@ -284,5 +285,6 @@ hr {
   .wrapped,
   .wrapper {
     margin: 0 20px;
+    padding: 0 20px;
   }
 }

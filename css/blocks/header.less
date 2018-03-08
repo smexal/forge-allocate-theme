@@ -17,16 +17,17 @@ header {
     width: 100%;
     z-index: 100;
     background-color: @color-bg;
+    -webkit-backface-visibility: hidden;
 
     + .content {
-        padding-top: 70px;
+        margin-top: 70px;
     }
 }
 
 .content > .subnavigation {
     background-color: @color-bg;
 
-    @media only screen and (max-width: 420px) {
+    @media only screen and (max-width: 570px) {
         height: auto;
         nav {
             width: 100%;
@@ -59,7 +60,7 @@ header, footer, .subnavigation {
         }
     }
 
-    @media only screen and (max-width: 420px) {
+    @media only screen and (max-width: 570px) {
         height: 60px;
 
         .wrapper {
@@ -98,9 +99,8 @@ header, footer, .subnavigation {
             height: 69px;
             width: 69px;
             border-right: 1px solid @header-border-color;
-            display: flex;
-            justify-content: center;
-            align-items: middle;
+            display: block;
+            text-align: center;
 
             &:hover {
                 i {
@@ -170,7 +170,7 @@ header, footer, .subnavigation {
 
                         li {
                             line-height: 60px;
-                            @media only screen and (max-width: 420px) {
+                            @media only screen and (max-width: 570px) {
                                 line-height: 40px;
                             }
 

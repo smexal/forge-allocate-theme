@@ -18,7 +18,7 @@
             justify-content: flex-end;
         }
 
-        @media only screen and (max-width: 420px) {
+        @media only screen and (max-width: 570px) {
             padding: 10px;
 
             div {
@@ -77,6 +77,10 @@
             position: absolute;
             bottom: 0;
 
+            @media only screen and (max-width: 570px) {
+                position: static;
+            }
+
             .btn {
                 margin-right: 10px;
             }
@@ -95,7 +99,7 @@
         }
     }
 
-    @media only screen and (max-width: 420px) {
+    @media only screen and (max-width: 570px) {
         h1, .text, .actions {
             padding: 0 10px 0 10px;
         }
@@ -119,7 +123,7 @@
         }
     }
 
-    @media only screen and (max-width: 420px) {
+    @media only screen and (max-width: 570px) {
         .row {
             display: block;
 
@@ -147,12 +151,14 @@
 }
 
 .forge-sponsors {
-    margin-top: 120px;
+    &.wrapper.component-listing {
+        margin-top: 60px !important;
+    }
 
     &.small {
         .listing {
             flex-wrap: wrap;
-            @media only screen and (max-width: 420px) {
+            @media only screen and (max-width: 570px) {
                 flex-direction: column;
             }
 
@@ -160,7 +166,7 @@
                 display: flex;
                 min-width: 30%;
                 margin-bottom: 20px;
-                @media only screen and (max-width: 420px) {
+                @media only screen and (max-width: 570px) {
                     width: 100%;
                 }
 
@@ -235,7 +241,7 @@
             &:hover {
                 .image img {
                     width: 140px;
-                    @media only screen and (max-width: 420px) {
+                    @media only screen and (max-width: 570px) {
                         width: 100px;
                     }
                 }
@@ -260,7 +266,7 @@
         }
     }
 
-    @media only screen and (max-width: 420px) {
+    @media only screen and (max-width: 570px) {
         .listing .listing-item {
             width: 45%;
 
@@ -280,7 +286,7 @@
     margin-top: 100px;
     margin-bottom: 30px;
 
-    @media only screen and (max-width: 420px) {
+    @media only screen and (max-width: 570px) {
         margin-top: 50px;
     }
 
@@ -293,7 +299,7 @@
                 width: 120px;
                 min-width: 120px;
 
-                @media only screen and (max-width: 420px) {
+                @media only screen and (max-width: 570px) {
                     width: 100px;                    
                     max-width: 100px;
                     min-width: 100px;
@@ -408,7 +414,7 @@
         }
     }
 
-    @media only screen and (max-width: 420px) {
+    @media only screen and (max-width: 570px) {
         .listing .listing-item {
             min-width: 100%;
 
@@ -467,7 +473,7 @@
         }
     }
 
-    @media only screen and (max-width: 420px) {
+    @media only screen and (max-width: 570px) {
         margin-top: 40px;
         .blocks .col-lg-12 {
             flex-wrap: wrap;

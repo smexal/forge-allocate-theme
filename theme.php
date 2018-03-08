@@ -69,7 +69,7 @@ class AllocateTheme extends Theme {
     public function start() {
         $this->registerNavigations();
 
-        $this->userArea = new UserArea();   
+        $this->userArea = new UserArea();
 
         $this->loadFiles();
         $this->tSettings = new ThemeSettings();
@@ -164,7 +164,7 @@ class AllocateTheme extends Theme {
             <link rel="icon" type="image/png" sizes="32x32" href="'.$favicon->getSizedImage(32, 32).'">
             <link rel="icon" type="image/png" sizes="16x16" href="'.$favicon->getSizedImage(16, 16).'">
             <meta name="theme-color" content="'.$variables['color-bg'].'">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
         ';
     }
 }

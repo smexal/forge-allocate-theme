@@ -10,14 +10,15 @@ header {
   width: 100%;
   z-index: 100;
   background-color: #1A1A1A;
+  -webkit-backface-visibility: hidden;
 }
 header + .content {
-  padding-top: 70px;
+  margin-top: 70px;
 }
 .content > .subnavigation {
   background-color: #1A1A1A;
 }
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 570px) {
   .content > .subnavigation {
     height: auto;
   }
@@ -50,7 +51,7 @@ footer,
     display: none;
   }
 }
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 570px) {
   header,
   footer,
   .subnavigation {
@@ -99,9 +100,8 @@ footer .wrapper .more-navigation,
   height: 69px;
   width: 69px;
   border-right: 1px solid #2d2d2d;
-  display: flex;
-  justify-content: center;
-  align-items: middle;
+  display: block;
+  text-align: center;
 }
 header .wrapper .more-navigation:hover i,
 footer .wrapper .more-navigation:hover i,
@@ -188,7 +188,7 @@ footer .wrapper .right .userarea .user-nav ul li,
   border-bottom: 1px solid #464646;
   font-size: 0.875em;
 }
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 570px) {
   header .wrapper .right .userarea .user-nav ul li,
   footer .wrapper .right .userarea .user-nav ul li,
   .subnavigation .wrapper .right .userarea .user-nav ul li {
