@@ -41,6 +41,7 @@ var slidein = {
             $(_target).replaceWith(newContent);
             $(document).trigger("ajaxReload");
             $(window).trigger("scroll");
+            $(_target).removeClass('loading');
         });
     },
 
@@ -60,6 +61,8 @@ var slidein = {
 
         var refreshUrl = overlay.attr('refresh-on-close');
         var refreshTarget = overlay.attr('refresh-target');
+
+        $(refreshTarget).addClass('loading');
 
         overlay.removeAttr('refresh-on-close');
         overlay.removeAttr('refresh-target');

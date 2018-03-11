@@ -297,3 +297,38 @@ hr {
         padding: 0 20px;
     }
 }
+
+.loading:not(.fadeIn.now) {
+    &:before {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        margin-top: -10px;
+        margin-left: -10px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        border-top-color: #333;
+        animation: allocate-spinner .6s linear infinite;
+        z-index: 500;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.7);
+        z-index: 400;
+    }
+}
+
+
+@keyframes allocate-spinner {
+  to {transform: rotate(360deg);}
+}
