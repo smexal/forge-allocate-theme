@@ -24,6 +24,11 @@ class SponsorlistingComponent extends ListingComponent {
                     'big' => i('Big Teaser Elements', 'forge-tournaments'),
                     'small' => i('Small Teasr Elements', 'forge-tournaments')
                 ]
+            ],
+            [
+                'label' => i('Hide Additional Information', 'forge-tournaments'),
+                'key' => 'hide_additional',
+                'type' => 'checkbox',
             ]
         ], $this->settings);
         return [
@@ -53,6 +58,7 @@ class SponsorlistingComponent extends ListingComponent {
                 'src' => $image->url.$image->name,
                 'alt' => $item->getMeta('title')
             ],
+            'hide_additional' => $this->getField('hide_additional'),
             'detail_url' => $item->url()
         ]);
     }

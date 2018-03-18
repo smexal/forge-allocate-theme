@@ -1,5 +1,5 @@
 var revealing = {
-    timer : 150,
+    timer : 60,
     visibility : 20,
 
     init : function() {
