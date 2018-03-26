@@ -101,14 +101,94 @@
 
 }
 
-#tournament-detail .encounter-entry {
-    a.btn {
-        background-color: @color-bg;
+.connection {
+    border: 1px solid @color-grey-light;
+    border-radius: 20px;
+}
+
+#tournament-detail {
+    .encounter-entry {
+        a.btn {
+            background-color: @color-bg;
+        }
+
+        &.is-own {
+            p {
+                color: @color-secondary;
+            }
+        }
     }
 
-    &.is-own {
-        p {
-            color: @color-secondary;
+    .bracket .round {
+        margin-right: 30px;
+
+        &:hover {
+            .winner, .lower {
+                .encounter {
+                    .team_1, .team_2 {
+                        background-color: @color-grey-light;
+                    }
+                }
+            }
+        }
+
+        .winner, .lower {
+            .encounter {
+                padding: 5px;
+                margin-bottom: 40px;
+
+                .btn {
+                    left: 24px;
+                }
+
+                &:before {
+                    height: 50px;
+                    top: 15px;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    border-color: @color-grey-light;
+                }
+
+                &:hover {
+                    span {
+                        color: @color-text-main;
+                    }
+                }
+
+                .team_1, .team_2 {
+                    border-radius: 100px;
+                    height: 35px;
+                    width: 180px;
+                    background-color: @color-bg-lighter;
+                    border: none;
+
+                    &.is-winner {
+                        color: @color-text-main;
+                        border: 1px solid @color-secondary;
+                    }
+
+                    &.loser {
+                        opacity: 0.4;
+                    }
+
+                    > span {
+                        transition: 200ms;
+                        line-height: 33px;
+
+                        &.name {
+                            padding-left: 10px;
+                            font-size: 1.143em;
+                            font-weight: normal;
+                        }
+
+                        &.score {
+                            border-left: none;
+                            font-weight: medium;
+                            font-size: 1.214em;
+                        }
+                    }
+                }
+            }
         }
     }
 }
