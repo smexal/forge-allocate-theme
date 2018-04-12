@@ -33,6 +33,13 @@ body {
 body > .content {
   min-height: 800px;
 }
+.tipster-ajax {
+  cursor: help;
+}
+.tooltipster-sidetip .tooltipster-box {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  background-color: #131313;
+}
 .wrapper,
 .wrapped {
   margin: 0 auto !important;
