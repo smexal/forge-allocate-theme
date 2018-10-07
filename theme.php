@@ -99,6 +99,11 @@ class AllocateTheme extends Theme {
             $logo = new Media(Settings::get('site-logo'));
         }
 
+        $cart = '';
+        if(App::instance()->mm->isActive('forge-shoppingcart')) {
+            $cart = \Forge\Modules\ForgeShoppingcart\Cart::trigger();
+        }
+
         return [
             'logo_url' => $logo ? $logo->getUrl() : false,
             'home_url' => Utils::getHomeUrl(),
@@ -106,7 +111,8 @@ class AllocateTheme extends Theme {
             'custom_js' => Settings::get('custom_js'),
             'main_navigation' => ContentNavigation::getNavigationList('main-navigation'),
             'userarea' => $this->userArea->output(),
-            'more_navigation_url' => App::instance()->vm->getViewByName('more-navigation')->buildURL()
+            'more_navigation_url' => App::instance()->vm->getViewByName('more-navigation')->buildURL(),
+            'shopping_cart_trigger' => $cart
         ];
     }
 
@@ -138,6 +144,7 @@ class AllocateTheme extends Theme {
         $this->addStyle($this->directory().'css/blocks/collections.less');
         $this->addStyle($this->directory().'css/blocks/tabs.less');
         $this->addStyle($this->directory().'css/blocks/table.less');
+        $this->addStyle($this->directory().'css/blocks/products.less');
 
         $this->addStyle($this->directory().'css/blocks/components.less');
 
