@@ -165,6 +165,23 @@ footer .wrapper .right,
   display: flex;
   align-items: center;
 }
+header .wrapper .right .cart-trigger,
+footer .wrapper .right .cart-trigger,
+.subnavigation .wrapper .right .cart-trigger {
+  background-color: transparent;
+  border-left: 1px solid #2d2d2d;
+}
+header .wrapper .right .cart-trigger:hover svg,
+footer .wrapper .right .cart-trigger:hover svg,
+.subnavigation .wrapper .right .cart-trigger:hover svg {
+  fill: #FF1744;
+}
+header .wrapper .right .cart-trigger svg,
+footer .wrapper .right .cart-trigger svg,
+.subnavigation .wrapper .right .cart-trigger svg {
+  transition: 200ms;
+  fill: white;
+}
 header .wrapper .right i.icon,
 footer .wrapper .right i.icon,
 .subnavigation .wrapper .right i.icon {

@@ -154,6 +154,19 @@ header, footer, .subnavigation {
             display: flex;
             align-items: center;
 
+            .cart-trigger {
+                background-color: transparent;
+                border-left: 1px solid @header-border-color;
+
+                &:hover svg {
+                    fill: @color-primary;
+                }
+                svg {
+                    transition: 200ms;
+                    fill: white;
+                }
+            }
+
             i.icon {
                 color: @color-text-lighter;
                 font-size: 20px;
