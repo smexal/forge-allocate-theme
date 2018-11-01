@@ -46,6 +46,12 @@
         background-color: @color-primary;
         color: @color-text-main;
 
+        &[disabled="disabled"] {
+            border:none;
+            background-color: @color-bg-darker;
+            opacity: 0.2;
+        }
+
         &:hover {
             box-shadow: @box-shadow;
         } 

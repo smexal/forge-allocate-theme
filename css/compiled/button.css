@@ -42,6 +42,11 @@
   background-color: #FF1744;
   color: #FFFFFF;
 }
+.btn.btn-primary[disabled="disabled"] {
+  border: none;
+  background-color: #131313;
+  opacity: 0.2;
+}
 .btn.btn-primary:hover {
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
 }
