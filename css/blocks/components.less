@@ -124,12 +124,17 @@
 }
 
 .forge-events-block {
-    margin-top: 150px;
-
     &:not(.in) {
         .bar {
             width: 0% !important;
         }
+    }
+
+    .indent-up {
+        margin: -170px 40px 0 40px;
+        background-color: @color-bg;
+        padding: 60px;
+        position: relative;
     }
 
     @media only screen and (max-width: 570px) {
