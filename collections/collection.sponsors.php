@@ -14,9 +14,8 @@ class SponsorsCollection extends DataCollection {
         $this->preferences['all-title'] = i('Manage Sponsors', 'allocate');
         $this->preferences['add-label'] = i('Add sponsors', 'allocate');
         $this->preferences['single-item'] = i('Sponsors', 'allocate');
-        $this->custom_fields();
     }
-    private function custom_fields() {
+    public function custom_fields() {
         $this->addFields([
             [
                 'key' => 'image',
