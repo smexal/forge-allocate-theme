@@ -4,6 +4,7 @@ namespace Forge\Themes\Allocate;
 
 use Forge\Core\Abstracts\Theme;
 use Forge\Core\App\App;
+use Forge\Core\App\ModifyHandler;
 use Forge\Core\Classes\ContentNavigation;
 use Forge\Core\Classes\Media;
 use Forge\Core\Classes\Settings;
@@ -75,6 +76,11 @@ class AllocateTheme extends Theme {
         $this->tSettings = new ThemeSettings();
         $this->lessVariables = $this->tSettings->getLessVariables();
 
+        ModifyHandler::instance()->add(
+            'modify_user_metafields',
+            [$this, 'modifyUserFields']
+        );
+
         /**
          * remove existing css files for recompilation
          */
@@ -85,6 +91,31 @@ class AllocateTheme extends Theme {
                     unlink($file); // delete file
             }
         });
+    }
+
+    public function modifyUserFields($fields) {
+        $fields[] = [
+            'key' => 'lastname',
+            'label' => i('Last name'),
+            'type' => 'text',
+            'required' => true,
+            'position' => 'left'
+        ];
+        $fields[] = [
+            'key' => 'forename',
+            'label' => i('Forename'),
+            'type' => 'text',
+            'required' => true,
+            'position' => 'left'
+        ];
+        $fields[] = [
+            'key' => 'birthday',
+            'label' => i('Birthdate'),
+            'type' => 'text',
+            'required' => true,
+            'position' => 'right'
+        ];
+        return $fields;
     }
 
     private function registerNavigations() {
