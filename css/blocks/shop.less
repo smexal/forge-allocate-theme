@@ -127,3 +127,99 @@
 
     }
 }
+
+#shopping-cart {
+    .entry {
+        margin-bottom: 0;
+        > * {
+            line-height: 40px;
+            margin: 0;
+        }
+    }
+
+    h4 {
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    .actions {
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+
+        a {
+            color: @color-bg-darker;
+        }
+        a.payment-trigger {
+            margin-right: 0;
+        }
+    }
+}
+
+.pay-panel {
+
+    .tab-content .actions {
+        position: relative;
+        &:before {
+            left: auto;
+            right: 0;
+        }
+    }
+
+    .form-group input[type="text"], .form-group input[type="password"], .form-group textarea, .form-group .bootstrap-tagsinput, .form-group .chosen-container, .form-group select {
+        border-radius: 2px;
+        border: 1px solid @cta-color;
+        transition: 200ms;
+
+        &:focus {
+            border: 1px solid @color-bg;
+        }
+    }
+
+    .form-group:not(.select):not(.checkbox) {
+        position: relative;
+        label {
+            position: absolute !important;
+            pointer-events: none;
+        }
+    }
+
+    .form-group > label+select.form-control {
+        margin: 0;
+        top: 0;
+    }
+
+    h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    hr {
+        border-bottom-color: #F2F2F2;
+    }
+
+    .form-group.checkbox {
+        label.control-label {
+            padding-left: 0;
+            position: relative;
+            width: 50%;
+            position: static;
+        }
+        input[type="checkbox"] {
+            width: auto;
+        }
+    }
+
+}
+
+#payment-overlay.delivery .form-group.checkbox input {
+    position: relative;
+    float: left;
+    top: 14px;
+    width: auto;
+}
+
+#payment-overlay.delivery .form-group.checkbox label.control-label {
+    padding-left: 20px;
+}
