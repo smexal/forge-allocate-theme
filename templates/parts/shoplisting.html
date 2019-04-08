@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <div class="component-productlist">
+        <div class="items">
+            {loop="products"}
+            <div class="item-card">
+                <a class="product-card" {if="$value.link"}href="{$value.link}"{/if} style='{if="$value.image"}background-image:url({$value.image});{/if}'>
+                    <div class="overlay">
+                        <div class="info">
+                            <h3>{$value.title}</h3>
+                            {if="$value.description"}<p>{$value.description}</p>{/if}
+                            <p class="price">{$value.price}</p>
+                        </div>
+                        <div class="actions">
+                            {$value.add_to_cart}
+                        </div>
+                    </div>
+                    <div class="darken"></div>
+                </a>
+            </div>
+            {/loop}
+            </div>
+        </div>
+    </div>
+</div>

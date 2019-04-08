@@ -81,6 +81,8 @@ class AllocateTheme extends Theme {
             [$this, 'modifyUserFields']
         );
 
+        $shop = new Shop();
+
         /**
          * remove existing css files for recompilation
          */
@@ -175,7 +177,7 @@ class AllocateTheme extends Theme {
         $this->addStyle($this->directory().'css/blocks/collections.less');
         $this->addStyle($this->directory().'css/blocks/tabs.less');
         $this->addStyle($this->directory().'css/blocks/table.less');
-        $this->addStyle($this->directory().'css/blocks/products.less');
+        $this->addStyle($this->directory().'css/blocks/shop.less');
 
         $this->addStyle($this->directory().'css/blocks/components.less');
 

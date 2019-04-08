@@ -1,0 +1,129 @@
+.component-productlist {
+    margin-top: 60px;
+
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -3%;
+        .item-card {
+            width: 30%;
+            margin-left: 3%;
+        }
+    }
+
+    .items > div {
+        &:nth-child(6n+1) {
+            a.product-card {
+                min-height: 420px;
+            }
+        }
+        &:nth-child(6n+2) {
+            a.product-card {
+                min-height: 320px;
+            }
+        }
+        &:nth-child(6n+3) {
+            a.product-card {
+                min-height: 480px;
+            }
+        }
+        &:nth-child(6n+4) {
+            a.product-card {
+                min-height: 380px;
+                margin-top: -60px;
+            }
+        }
+        &:nth-child(6n+5) {
+            a.product-card {
+                min-height: 480px;
+                margin-top: -160px;
+            }
+        }
+        &:nth-child(6n+6) {
+            a.product-card {
+                min-height: 320px;
+            }
+        }
+    }
+
+    .product-card {
+        background-size: cover;
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px rgba(0,0,4,0.3);
+        border-radius: 4px;
+
+        transition: 200ms;
+        &:hover {
+            box-shadow: 1px 1px 10px rgba(0,0,10,0.8);
+
+            p.price {
+                color: @color-primary;
+            }
+        }
+
+        .darken {
+            transition: 200ms;
+            border-radius: 4px;
+            z-index: 4;
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background:linear-gradient(to bottom, rgba(0,0,0,0) 20%,rgba(0,0,0,0.8) 100%);
+        }
+
+        .overlay {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 5;
+        }
+        .add-to-cart {
+            background: none;
+            border: 1px solid white;
+            border-radius: 100px;
+
+            svg {
+                transition: 200ms;
+            }
+
+            &:hover {
+                svg {
+                    fill: @color-primary;
+                }
+            }
+        }
+
+        p.price {
+            font-weight: 600;
+            font-size: 14px;
+            color: @color-primary !important;
+        }
+
+        h3 {
+            margin-bottom: 0;
+            margin-top: 0;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .info {
+            margin-top: 0;
+
+            p:not(.price) {
+                display: none;
+            }
+        }
+
+        .actions {
+            margin: 0;
+
+            svg {
+                fill: white;
+            }
+        }
+    }
+
+    .overlay {
+
+    }
+}
