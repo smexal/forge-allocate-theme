@@ -75,7 +75,6 @@
         .overlay {
             display: flex;
             justify-content: space-between;
-            position: relative;
             z-index: 5;
         }
         .add-to-cart {
@@ -122,10 +121,6 @@
             }
         }
     }
-
-    .overlay {
-
-    }
 }
 
 #shopping-cart {
@@ -157,7 +152,6 @@
 }
 
 .pay-panel {
-
     .tab-content .actions {
         position: relative;
         &:before {
@@ -222,4 +216,87 @@
 
 #payment-overlay.delivery .form-group.checkbox label.control-label {
     padding-left: 20px;
+}
+
+.product-detail {
+    padding-top: 60px;
+
+    .price-info {
+        small {
+            text-transform: uppercase;
+            opacity: 0.6;
+            font-size: 11px;
+        }
+        .price {
+            font-weight: 600;
+            font-size: 17px;
+        }
+    }
+}
+.add-to-cart-group {
+    position: relative;
+}
+.add-to-cart-group:not(.with-amount) {
+    position: static;
+
+    .add-to-cart-message {
+        transition: 200ms;
+    }
+    .add-to-cart-message.visible {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: @color-primary;
+        padding: 10px;
+        text-transform: uppercase;
+        color: white;
+        font-weight: 600;
+        text-align: center;
+        font-size: 13px;
+    }
+}
+.add-to-cart-group.with-amount {
+    margin-top: 40px;
+    display: flex;
+
+    .add-to-cart-message {
+        line-height: 46px;
+        opacity: 0.8;
+        font-size: 12px;
+    }
+
+    label {
+        z-index: 6;
+    }
+    input {
+        position: relative;
+        z-index: 5;
+        background-color: @color-bg;
+    }
+
+    button.add-to-cart {
+        height: 46px;
+        background-color: @color-primary;
+        border: none;
+        position: relative;
+        z-index: 4;
+        left: -25px;
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
+        padding-left: 40px;
+        transition: 200ms;
+        svg {
+            fill: white;
+        }
+    }
+
+}
+
+#payment-overlay.delivery .form-group.checkbox small {
+    line-height: inherit;
+    padding-left: 0;
+    position: relative;
+    left: 35px;
+    top: -10px;
 }

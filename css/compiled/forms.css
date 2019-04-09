@@ -69,6 +69,7 @@ form .file-upload-default {
   margin: 4px 0;
 }
 .form-group input[type="text"],
+.form-group input[type="number"],
 .form-group input[type="password"],
 .form-group textarea,
 .form-group .bootstrap-tagsinput,
@@ -85,6 +86,7 @@ form .file-upload-default {
 }
 @media only screen and (max-width: 420px) {
   .form-group input[type="text"],
+  .form-group input[type="number"],
   .form-group input[type="password"],
   .form-group textarea,
   .form-group .bootstrap-tagsinput,
@@ -94,6 +96,7 @@ form .file-upload-default {
   }
 }
 .form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
 .form-group input[type="password"]:focus,
 .form-group textarea:focus,
 .form-group .bootstrap-tagsinput:focus,

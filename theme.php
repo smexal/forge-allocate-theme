@@ -137,6 +137,9 @@ class AllocateTheme extends Theme {
             $cart = \Forge\Modules\ForgeShoppingcart\Cart::trigger();
         }
 
+        // checks the user informations completeness and displays a overlay if not set.
+        $userChecker = Userinformation::run();
+
         return [
             'logo_url' => $logo ? $logo->getUrl() : false,
             'home_url' => Utils::getHomeUrl(),
@@ -145,7 +148,8 @@ class AllocateTheme extends Theme {
             'main_navigation' => ContentNavigation::getNavigationList('main-navigation'),
             'userarea' => $this->userArea->output(),
             'more_navigation_url' => App::instance()->vm->getViewByName('more-navigation')->buildURL(),
-            'shopping_cart_trigger' => $cart
+            'shopping_cart_trigger' => $cart,
+            'user_checker' => $userChecker
         ];
     }
 
@@ -178,6 +182,7 @@ class AllocateTheme extends Theme {
         $this->addStyle($this->directory().'css/blocks/tabs.less');
         $this->addStyle($this->directory().'css/blocks/table.less');
         $this->addStyle($this->directory().'css/blocks/shop.less');
+        $this->addStyle($this->directory().'css/blocks/overlay-missing.less');
 
         $this->addStyle($this->directory().'css/blocks/components.less');
 
