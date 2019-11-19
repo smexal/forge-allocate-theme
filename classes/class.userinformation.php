@@ -36,7 +36,7 @@ class Userinformation {
     public static function checkFieldData() {
         $missing = [];
         foreach(User::getMetaFields() as $field) {
-            if($field['required'] == true) {
+            if($field['required'] == true && $field['position'] != 'hidden') {
                 $value = App::instance()->user->getMeta($field['key']);
                 if(strlen($value) > 0) {
                     continue;

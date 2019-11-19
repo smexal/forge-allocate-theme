@@ -19,10 +19,19 @@ class Shop {
             'modify_product_listing_template_path',
             [$this, 'updateListingTemplatePath']
         );
+
+        ModifyHandler::instance()->add(
+            'modify_product_listing_sized_image',
+            [$this, 'updateListingSizedImage']
+        );
     }
 
     public function updateListingTemplateName() {
         return 'shoplisting';
+    }
+
+    public function updateListingSizedImage() {
+        return [960, 960];
     }
 
     public function updateListingTemplatePath() {
