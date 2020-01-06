@@ -163,7 +163,8 @@ class AllocateTheme extends Theme {
 
         $font = Settings::get('font');
         if($font) {
-            $this->addStyle("//fonts.googleapis.com/css?family=".str_replace(" ", "+", $font).":400,500,700", true);
+            //fonts.googleapis.com/css?family=Exo+2&display=swap
+            $this->addStyle("//fonts.googleapis.com/css?family=".str_replace(" ", "+", $font).":400,500,700&display=swap", true);
         }
 
         // load custom css

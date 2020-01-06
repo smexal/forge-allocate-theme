@@ -80,7 +80,7 @@ form .file-upload-default {
   background: transparent;
   border: 1px solid #3B3B3B;
   box-shadow: none;
-  border-radius: 100px;
+  border-radius: 4px;
   transition: 300ms;
   color: #FFFFFF;
 }
