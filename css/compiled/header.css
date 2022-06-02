@@ -50,8 +50,7 @@ header,
 footer,
 .subnavigation {
   height: 70px;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
-  border-bottom: 1px solid #2d2d2d;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
 }
 @media only screen and (max-width: 1024px) {
   header .main-navigation,
@@ -74,7 +73,7 @@ footer,
   header .logo,
   footer .logo,
   .subnavigation .logo {
-    width: 90px;
+    max-width: 90px;
   }
   header .userarea .btn,
   footer .userarea .btn,
@@ -108,7 +107,6 @@ footer .wrapper .more-navigation,
   cursor: pointer;
   height: 69px;
   width: 69px;
-  border-right: 1px solid #2d2d2d;
   display: block;
   text-align: center;
 }
@@ -124,12 +122,6 @@ footer .wrapper .more-navigation i,
   color: #FFFFFF;
   font-size: 20px;
   line-height: 69px;
-}
-header .wrapper .userarea,
-footer .wrapper .userarea,
-.subnavigation .wrapper .userarea {
-  border-left: 1px solid #2d2d2d;
-  border-right: 1px solid #2d2d2d;
 }
 header .wrapper .userarea .loggedin-as,
 footer .wrapper .userarea .loggedin-as,
@@ -169,7 +161,6 @@ header .wrapper .right .cart-trigger,
 footer .wrapper .right .cart-trigger,
 .subnavigation .wrapper .right .cart-trigger {
   background-color: transparent;
-  border-left: 1px solid #2d2d2d;
 }
 header .wrapper .right .cart-trigger:hover svg,
 footer .wrapper .right .cart-trigger:hover svg,
@@ -196,7 +187,6 @@ footer .wrapper .right i.icon,
 header .wrapper .right .userarea .user-info,
 footer .wrapper .right .userarea .user-info,
 .subnavigation .wrapper .right .userarea .user-info {
-  border-left: 1px solid #2d2d2d;
   cursor: pointer;
   display: flex;
   height: 100%;
@@ -246,13 +236,14 @@ footer .logo,
   vertical-align: middle;
   margin-right: 25px;
   padding-right: 25px;
-  border-right: 1px solid #2d2d2d;
 }
 header .logo img,
 footer .logo img,
 .subnavigation .logo img {
   transition: 300ms;
   transform-origin: left center;
+  max-height: 50%;
+  align-self: center;
 }
 header .logo:hover img,
 footer .logo:hover img,

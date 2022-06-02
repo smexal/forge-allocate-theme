@@ -37,7 +37,7 @@ body > .content {
   cursor: help;
 }
 .tooltipster-sidetip .tooltipster-box {
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
   background-color: #131313;
 }
 .wrapper,
@@ -298,7 +298,7 @@ small + h3 {
 }
 .compact-infobox .icon-container,
 .compact-infobox .avatar {
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
 }
 .status {
   border: 1px solid #3B3B3B;

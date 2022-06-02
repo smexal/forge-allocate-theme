@@ -12,7 +12,7 @@
   border-bottom-right-radius: 5px;
   padding: 20px 30px;
   width: 450px;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
 }
 .userarea .overlay-fitsize:not(.hidden) {
   -webkit-animation: animate-smack 750ms linear both;

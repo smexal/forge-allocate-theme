@@ -32,7 +32,7 @@
 }
 .btn:hover {
   border: 1px solid #FF1744;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
   color: #FF1744;
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -48,7 +48,7 @@
   opacity: 0.2;
 }
 .btn.btn-primary:hover {
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
 }
 .actions .btn {
   margin-right: 15px;

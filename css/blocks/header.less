@@ -60,7 +60,6 @@ header {
 header, footer, .subnavigation {
     height: @header-height;
     box-shadow: @box-shadow;
-    border-bottom: 1px solid @header-border-color;
 
     @media only screen and (max-width: 1024px) {
         .main-navigation {
@@ -76,7 +75,7 @@ header, footer, .subnavigation {
         }
 
         .logo {
-            width: 90px;
+            max-width: 90px;
         }
 
         .userarea {
@@ -106,7 +105,6 @@ header, footer, .subnavigation {
             cursor: pointer;
             height: 69px;
             width: 69px;
-            border-right: 1px solid @header-border-color;
             display: block;
             text-align: center;
 
@@ -125,8 +123,6 @@ header, footer, .subnavigation {
         }
 
         .userarea {
-            border-left: 1px solid @header-border-color;
-            border-right: 1px solid  @header-border-color;
 
             .loggedin-as {
                 padding-right: 20px;
@@ -156,7 +152,6 @@ header, footer, .subnavigation {
 
             .cart-trigger {
                 background-color: transparent;
-                border-left: 1px solid @header-border-color;
 
                 &:hover svg {
                     fill: @color-primary;
@@ -178,7 +173,6 @@ header, footer, .subnavigation {
             }
             .userarea {
                 .user-info {
-                    border-left: 1px solid @header-border-color;
                     cursor: pointer;
                     display: flex;
                     height: 100%;
@@ -226,7 +220,6 @@ header, footer, .subnavigation {
         vertical-align: middle;
         margin-right: 25px;
         padding-right: 25px;
-        border-right: 1px solid @header-border-color;
 
         img {
             transition: 300ms;
