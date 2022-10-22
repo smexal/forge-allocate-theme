@@ -46,7 +46,7 @@ body > .content {
 }
 .wrapper:not(.no-max),
 .wrapped:not(.no-max) {
-  max-width: 1180px;
+  max-width: 1400px;
 }
 .wrapper.no-max,
 .wrapped.no-max {
